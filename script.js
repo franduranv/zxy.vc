@@ -1,0 +1,1 @@
+// script.js vaciado: no se utiliza actualmente
