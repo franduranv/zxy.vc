@@ -16,14 +16,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #0A0A1A;
-      --bg2:      #0F0F24;
-      --bg3:      #141430;
-      --accent:   #6C63FF;
-      --accent2:  #8B84FF;
-      --text:     #E2E2F0;
-      --muted:    #8888AA;
-      --border:   #2A2A4A;
+      --bg:       #08080F;
+      --bg2:      #0F0F18;
+      --bg3:      #16161F;
+      --accent:   #FFFFFF;
+      --accent2:  #C8C8D8;
+      --text:     #F0F0F5;
+      --muted:    #707080;
+      --border:   #222230;
       --font-h:   'Oswald', sans-serif;
       --font-b:   'Raleway', sans-serif;
     }
@@ -127,7 +127,7 @@
     }
     .nav-links a:hover { color: var(--text); }
     .nav-cta {
-      background: var(--accent);
+      background: #F0F0F5; color: #08080F;
       color: #fff !important;
       padding: 10px 20px;
       border-radius: 6px;
@@ -172,7 +172,7 @@
     }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu .nav-cta {
-      background: var(--accent);
+      background: #F0F0F5; color: #08080F;
       color: #fff !important;
       text-align: center;
       padding: 12px;
@@ -200,7 +200,7 @@
       top: -200px; left: 50%;
       transform: translateX(-50%);
       width: 900px; height: 900px;
-      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 65%);
       pointer-events: none;
     }
     .hero-inner {
@@ -212,8 +212,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(108,99,255,0.12);
-      border: 1px solid rgba(108,99,255,0.3);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 100px;
       padding: 6px 16px;
       font-size: 12px;
@@ -226,7 +226,7 @@
     .hero-eyebrow::before {
       content: '';
       width: 6px; height: 6px;
-      background: var(--accent);
+      background: #F0F0F5; color: #08080F;
       border-radius: 50%;
       animation: pulse 2s ease-in-out infinite;
     }
@@ -256,19 +256,19 @@
       flex-wrap: wrap;
     }
     .btn-primary {
-      background: var(--accent);
-      color: #fff;
+      background: #FFFFFF;
+      color: #08080F;
       padding: 14px 28px;
       border-radius: 8px;
       font-family: var(--font-b);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 15px;
       transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
     .btn-primary:hover {
-      background: var(--accent2);
+      background: #E0E0EA;
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(108,99,255,0.35);
+      box-shadow: 0 8px 32px rgba(255,255,255,0.15);
     }
     .btn-secondary {
       background: transparent;
@@ -282,8 +282,8 @@
       transition: border-color 0.2s, color 0.2s, transform 0.2s;
     }
     .btn-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+      border-color: rgba(255,255,255,0.5);
+      color: #FFFFFF;
       transform: translateY(-2px);
     }
     .hero-badge {
@@ -330,7 +330,7 @@
       font-family: var(--font-h);
       font-weight: 600;
       font-size: clamp(36px, 5vw, 56px);
-      color: var(--accent);
+      color: #FFFFFF;
       line-height: 1;
       margin-bottom: 8px;
     }
@@ -375,9 +375,9 @@
       transition: opacity 0.3s;
     }
     .venture-card:hover {
-      border-color: rgba(108,99,255,0.4);
+      border-color: rgba(255,255,255,0.2);
       transform: translateY(-4px);
-      box-shadow: 0 12px 48px rgba(108,99,255,0.1);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.4);
     }
     .venture-card:hover::before { opacity: 1; }
     .venture-card-top {
@@ -402,19 +402,19 @@
       border-radius: 100px;
     }
     .badge-operando {
-      background: rgba(34, 197, 94, 0.12);
-      color: #22c55e;
-      border: 1px solid rgba(34, 197, 94, 0.25);
+      background: rgba(240,240,245,0.1);
+      color: #F0F0F5;
+      border: 1px solid rgba(240,240,245,0.25);
     }
     .badge-live {
-      background: rgba(108,99,255,0.15);
+      background: rgba(240,240,245,0.08);
       color: var(--accent2);
-      border: 1px solid rgba(108,99,255,0.3);
+      border: 1px solid rgba(240,240,245,0.2);
     }
     .badge-dev {
-      background: rgba(251, 191, 36, 0.1);
-      color: #fbbf24;
-      border: 1px solid rgba(251, 191, 36, 0.2);
+      background: rgba(240,240,245,0.05);
+      color: var(--muted);
+      border: 1px solid rgba(240,240,245,0.12);
     }
     .venture-name {
       font-family: var(--font-h);
@@ -424,7 +424,7 @@
     }
     .venture-tagline {
       font-size: 13px;
-      color: var(--accent2);
+      color: var(--muted);
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -445,7 +445,7 @@
       margin-bottom: 4px;
     }
     .venture-problem-label { color: var(--muted); }
-    .venture-solution-label { color: var(--accent); }
+    .venture-solution-label { color: #FFFFFF; }
     .venture-footer {
       margin-top: 24px;
       padding-top: 20px;
@@ -457,7 +457,7 @@
     .venture-link {
       font-size: 13px;
       font-weight: 600;
-      color: var(--accent);
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -491,21 +491,22 @@
       transition: border-color 0.3s, transform 0.2s;
     }
     .agent-card:hover {
-      border-color: rgba(108,99,255,0.4);
+      border-color: rgba(255,255,255,0.2);
       transform: translateY(-3px);
     }
     .agent-avatar {
       width: 44px;
       height: 44px;
       border-radius: 10px;
-      background: linear-gradient(135deg, var(--accent), #9C94FF);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-h);
       font-size: 18px;
       font-weight: 600;
-      color: #fff;
+      color: #FFFFFF;
       margin-bottom: 16px;
     }
     .agent-name {
@@ -513,6 +514,7 @@
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 4px;
+      color: #FFFFFF;
     }
     .agent-role {
       font-size: 12px;
@@ -525,11 +527,118 @@
     .agent-spec {
       font-size: 13px;
       color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .agent-capabilities {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .agent-capabilities li {
+      font-size: 12px;
+      color: var(--muted);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .agent-capabilities li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: rgba(255,255,255,0.3);
+      font-size: 11px;
+    }
+    /* How Agent OS Works diagram */
+    .agent-os-diagram {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      margin: 48px 0;
+      overflow-x: auto;
+    }
+    .agent-os-diagram h3 {
+      font-family: var(--font-h);
+      font-size: 22px;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .diagram-flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      min-width: 540px;
+    }
+    .diagram-node {
+      flex: 1;
+      min-width: 100px;
+      text-align: center;
+    }
+    .diagram-node-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 12px;
+      margin-bottom: 8px;
+    }
+    .diagram-node-title {
+      font-family: var(--font-h);
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFFFFF;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+    .diagram-node-sub {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+    .diagram-arrow {
+      font-size: 18px;
+      color: rgba(255,255,255,0.2);
+      padding: 0 8px;
+      flex-shrink: 0;
+      align-self: flex-start;
+      margin-top: 20px;
+    }
+    .agent-os-quote-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid #FFFFFF;
+      border-radius: 8px;
+      padding: 32px 36px;
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+    .agent-os-quote-box .quote-main {
+      font-family: var(--font-h);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 400;
+      line-height: 1.4;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+    .agent-os-quote-box .quote-main .highlight { color: #FFFFFF; font-weight: 600; }
+    .agent-os-quote-box .quote-detail {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
     }
     .agente-quote {
       background: var(--bg);
       border: 1px solid var(--border);
-      border-left: 4px solid var(--accent);
+      border-left: 3px solid #FFFFFF;
       border-radius: 8px;
       padding: 32px 36px;
       max-width: 720px;
@@ -540,7 +649,7 @@
       font-weight: 400;
       line-height: 1.4;
     }
-    .agente-quote .highlight { color: var(--accent); }
+    .agente-quote .highlight { color: #FFFFFF; font-weight: 600; }
 
     /* ─── EQUIPO ─── */
     #equipo { background: var(--bg); }
@@ -558,7 +667,7 @@
       transition: border-color 0.3s, transform 0.3s;
     }
     .equipo-card:hover {
-      border-color: rgba(108,99,255,0.4);
+      border-color: rgba(255,255,255,0.2);
       transform: translateY(-4px);
     }
     .equipo-card-top {
@@ -571,7 +680,8 @@
       width: 64px;
       height: 64px;
       border-radius: 16px;
-      background: linear-gradient(135deg, #1A1A3A, var(--accent));
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -589,7 +699,7 @@
     }
     .equipo-role {
       font-size: 13px;
-      color: var(--accent2);
+      color: var(--muted);
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -608,21 +718,23 @@
     .equipo-link {
       font-size: 13px;
       font-weight: 600;
-      color: var(--accent);
-      border: 1px solid rgba(108,99,255,0.3);
+      color: var(--text);
+      border: 1px solid var(--border);
       padding: 6px 14px;
       border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
     }
     .equipo-link:hover {
-      background: rgba(108,99,255,0.1);
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.25);
     }
     .agente-os-card {
-      background: linear-gradient(135deg, #0F0F2A, #1A1A3A);
-      border: 1px solid rgba(108,99,255,0.3);
+      background: var(--bg2);
+      border: 1px solid rgba(255,255,255,0.12);
     }
     .agente-os-card .equipo-avatar {
-      background: linear-gradient(135deg, var(--accent), #9C94FF);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
     }
     .agente-os-card .equipo-bio { color: var(--text); }
 
@@ -647,14 +759,14 @@
       flex-direction: column;
     }
     .research-card:hover {
-      border-color: rgba(108,99,255,0.4);
+      border-color: rgba(255,255,255,0.2);
       transform: translateY(-4px);
     }
     .research-icon {
       width: 48px;
       height: 48px;
-      background: rgba(108,99,255,0.12);
-      border: 1px solid rgba(108,99,255,0.2);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -679,7 +791,7 @@
     .research-link {
       font-size: 13px;
       font-weight: 600;
-      color: var(--accent);
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -735,7 +847,7 @@
       outline: none;
     }
     .form-input:focus, .form-textarea:focus {
-      border-color: var(--accent);
+      border-color: rgba(255,255,255,0.4);
     }
     .form-textarea { resize: vertical; min-height: 120px; }
     .form-row {
@@ -748,20 +860,20 @@
     }
     .form-submit {
       width: 100%;
-      background: var(--accent);
-      color: #fff;
+      background: #FFFFFF;
+      color: #08080F;
       border: none;
       padding: 16px;
       border-radius: 8px;
       font-family: var(--font-b);
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: background 0.2s, transform 0.2s;
       margin-top: 8px;
     }
     .form-submit:hover {
-      background: var(--accent2);
+      background: #E0E0EA;
       transform: translateY(-2px);
     }
     .contact-alt {
@@ -771,7 +883,7 @@
       color: var(--muted);
     }
     .contact-alt a {
-      color: var(--accent);
+      color: #FFFFFF;
       font-weight: 600;
       transition: color 0.2s;
     }
@@ -834,7 +946,7 @@
       font-size: 13px;
       color: var(--muted);
     }
-    .footer-copy span { color: var(--accent); }
+    .footer-copy span { color: #FFFFFF; }
     @media (max-width: 640px) {
       .footer-inner { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
@@ -844,18 +956,18 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.3); }
 
     /* ─── SELECTION ─── */
-    ::selection { background: rgba(108,99,255,0.3); color: var(--text); }
+    ::selection { background: rgba(255,255,255,0.15); color: var(--text); }
   
     /* ─── HOW IT WORKS ─── */
     .process-steps { display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap; }
     .process-step { flex: 1; min-width: 220px; background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; }
-    .step-number { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--purple); opacity: .5; margin-bottom: 12px; line-height: 1; }
+    .step-number { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--accent); opacity: .5; margin-bottom: 12px; line-height: 1; }
     .step-content h3 { font-family: 'Oswald', sans-serif; font-size: 1.3rem; margin-bottom: 10px; }
     .step-content p { color: var(--muted); font-size: .9rem; line-height: 1.6; }
-    .process-arrow { font-size: 1.5rem; color: var(--purple); opacity: .4; align-self: center; padding: 0 4px; }
+    .process-arrow { font-size: 1.5rem; color: var(--accent); opacity: .4; align-self: center; padding: 0 4px; }
     @media (max-width: 768px) { .process-arrow { display: none; } }
 
     /* ─── TWO COL CTA ─── */
@@ -868,7 +980,7 @@
     .cta-list li { color: var(--muted); font-size: .9rem; padding: 6px 0; border-bottom: 1px solid var(--border); }
     .cta-list li:last-child { border-bottom: none; }
     .badge-blue { background: #3B82F6; }
-    .badge-purple { background: var(--purple); }
+    .badge-purple { background: #F0F0F5; color: #08080F; }
     .vclab-badge { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 20px; font-size: .85rem; color: var(--muted); }
     .vclab-badge strong { color: var(--text); }
 
@@ -883,12 +995,12 @@
       padding: 12px 16px; color: var(--text); font-family: 'Raleway', sans-serif; font-size: .95rem;
       transition: border .2s;
     }
-    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--purple); }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
     .form-group textarea { resize: vertical; min-height: 80px; }
     .radio-group { display: flex; flex-direction: column; gap: 10px; }
     .radio-option { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; font-size: .9rem; }
-    .radio-option input { accent-color: var(--purple); width: 16px; height: 16px; }
-    .radio-option:hover { border-color: var(--purple); }
+    .radio-option input { accent-color: var(--accent); width: 16px; height: 16px; }
+    .radio-option:hover { border-color: var(--accent); }
     .btn-full { width: 100%; text-align: center; justify-content: center; }
     .form-disclaimer { text-align: center; color: var(--muted); font-size: .8rem; margin-top: 12px; }
     #founder-fields { transition: opacity .3s; }
@@ -1232,28 +1344,28 @@
   <!-- ─── CONTACTO ─── -->
   
   <!-- HOW IT WORKS -->
-  <section id="proceso" style="padding:80px 0;border-top:1px solid #2A2A4A;">
+  <section id="proceso" style="padding:80px 0;border-top:1px solid #222230;">
     <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
       <div style="text-align:center;margin-bottom:56px;">
-        <span style="background:#6C63FF;color:#fff;padding:4px 14px;border-radius:4px;font-family:Oswald;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;">El proceso</span>
-        <h2 style="font-family:Oswald;font-size:2.2rem;margin:16px 0 12px;color:#E2E2F0;">Cómo construimos</h2>
-        <p style="color:#8888AA;max-width:560px;margin:0 auto;">No trabajamos con decks. Trabajamos con problemas reales y founders que los han vivido.</p>
+        <span style="background:#F0F0F5;color:#08080F;padding:4px 14px;border-radius:4px;font-family:Oswald;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;">El proceso</span>
+        <h2 style="font-family:Oswald;font-size:clamp(1.6rem,4vw,2.2rem);margin:16px 0 12px;color:#F0F0F5;">Cómo construimos</h2>
+        <p style="color:#707080;max-width:560px;margin:0 auto;">No trabajamos con decks. Trabajamos con problemas reales y founders que los han vivido.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-        <div style="background:#12122A;border:1px solid #2A2A4A;border-radius:12px;padding:32px;position:relative;">
-          <div style="font-family:Oswald;font-size:3rem;color:#6C63FF;opacity:.3;position:absolute;top:16px;right:20px;line-height:1;">01</div>
-          <h3 style="font-family:Oswald;font-size:1.3rem;color:#E2E2F0;margin-bottom:12px;">Identify</h3>
-          <p style="color:#8888AA;font-size:.95rem;line-height:1.7;">Encontramos el problema correcto con el founder correcto. Sin Founder-Market Fit genuino, no avanzamos. El mercado no se puede fingir.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+        <div style="background:#0F0F18;border:1px solid #222230;border-radius:12px;padding:32px;position:relative;">
+          <div style="font-family:Oswald;font-size:3rem;color:#FFFFFF;opacity:.08;position:absolute;top:16px;right:20px;line-height:1;">01</div>
+          <h3 style="font-family:Oswald;font-size:1.3rem;color:#F0F0F5;margin-bottom:12px;">Identify</h3>
+          <p style="color:#707080;font-size:.95rem;line-height:1.7;">Encontramos el problema correcto con el founder correcto. Sin Founder-Market Fit genuino, no avanzamos. El mercado no se puede fingir.</p>
         </div>
-        <div style="background:#12122A;border:1px solid #2A2A4A;border-radius:12px;padding:32px;position:relative;">
-          <div style="font-family:Oswald;font-size:3rem;color:#6C63FF;opacity:.3;position:absolute;top:16px;right:20px;line-height:1;">02</div>
-          <h3 style="font-family:Oswald;font-size:1.3rem;color:#E2E2F0;margin-bottom:12px;">Build</h3>
-          <p style="color:#8888AA;font-size:.95rem;line-height:1.7;">Agent OS construye el venture en semanas, no meses. El founder dirige. Los agentes ejecutan. De idea a producto funcional en menos de 30 días.</p>
+        <div style="background:#0F0F18;border:1px solid #222230;border-radius:12px;padding:32px;position:relative;">
+          <div style="font-family:Oswald;font-size:3rem;color:#FFFFFF;opacity:.08;position:absolute;top:16px;right:20px;line-height:1;">02</div>
+          <h3 style="font-family:Oswald;font-size:1.3rem;color:#F0F0F5;margin-bottom:12px;">Build</h3>
+          <p style="color:#707080;font-size:.95rem;line-height:1.7;">Agent OS construye el venture en semanas, no meses. El founder dirige. Los agentes ejecutan. De idea a producto funcional en menos de 30 días.</p>
         </div>
-        <div style="background:#12122A;border:1px solid #2A2A4A;border-radius:12px;padding:32px;position:relative;">
-          <div style="font-family:Oswald;font-size:3rem;color:#6C63FF;opacity:.3;position:absolute;top:16px;right:20px;line-height:1;">03</div>
-          <h3 style="font-family:Oswald;font-size:1.3rem;color:#E2E2F0;margin-bottom:12px;">Scale</h3>
-          <p style="color:#8888AA;font-size:.95rem;line-height:1.7;">De revenue signal a mercado en menos de 90 días. Solo escalamos lo que funciona. La evidencia manda, no las proyecciones.</p>
+        <div style="background:#0F0F18;border:1px solid #222230;border-radius:12px;padding:32px;position:relative;">
+          <div style="font-family:Oswald;font-size:3rem;color:#FFFFFF;opacity:.08;position:absolute;top:16px;right:20px;line-height:1;">03</div>
+          <h3 style="font-family:Oswald;font-size:1.3rem;color:#F0F0F5;margin-bottom:12px;">Scale</h3>
+          <p style="color:#707080;font-size:.95rem;line-height:1.7;">De revenue signal a mercado en menos de 90 días. Solo escalamos lo que funciona. La evidencia manda, no las proyecciones.</p>
         </div>
       </div>
     </div>
@@ -1265,9 +1377,9 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;">
         
         <!-- Founders card -->
-        <div style="background:#12122A;border:1px solid #6C63FF;border-radius:16px;padding:40px;">
+        <div style="background:#12122A;border:1px solid #FFFFFF;border-radius:16px;padding:40px;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
-            <div style="width:48px;height:48px;background:#6C63FF22;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">🚀</div>
+            <div style="width:48px;height:48px;background:#FFFFFF22;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">🚀</div>
             <div>
               <div style="font-family:Oswald;font-size:1.4rem;color:#E2E2F0;">Soy Founder</div>
               <div style="color:#8888AA;font-size:.85rem;">Tengo el problema. Busco el equipo.</div>
@@ -1277,20 +1389,20 @@
           <div style="margin-bottom:24px;">
             <div style="color:#E2E2F0;font-size:.85rem;font-weight:600;margin-bottom:12px;">Lo que evaluamos:</div>
             <div style="display:flex;flex-direction:column;gap:8px;">
-              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> ¿Cuál es tu historia con el problema?</div>
-              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> ¿Tienes acceso directo al mercado?</div>
-              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> ¿Puedes dedicar tiempo full-time?</div>
-              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> ¿El problema es real y urgente hoy?</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#FFFFFF;">→</span> ¿Cuál es tu historia con el problema?</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#FFFFFF;">→</span> ¿Tienes acceso directo al mercado?</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#FFFFFF;">→</span> ¿Puedes dedicar tiempo full-time?</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#FFFFFF;">→</span> ¿El problema es real y urgente hoy?</div>
             </div>
           </div>
-          <a href="https://tally.so/r/zxy-founder" target="_blank" style="display:block;background:#6C63FF;color:#fff;padding:14px 24px;border-radius:8px;text-align:center;font-family:Oswald;font-size:1rem;letter-spacing:.5px;text-decoration:none;transition:background .2s;">Aplicar como Founder →</a>
+          <a href="https://tally.so/r/zxy-founder" target="_blank" style="display:block;background:#FFFFFF;color:#fff;padding:14px 24px;border-radius:8px;text-align:center;font-family:Oswald;font-size:1rem;letter-spacing:.5px;text-decoration:none;transition:background .2s;">Aplicar como Founder →</a>
           <p style="color:#8888AA;font-size:.75rem;text-align:center;margin-top:12px;">Revisamos cada aplicación en &lt;5 días hábiles</p>
         </div>
 
         <!-- Investors card -->
         <div style="background:#12122A;border:1px solid #2A2A4A;border-radius:16px;padding:40px;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
-            <div style="width:48px;height:48px;background:#6C63FF22;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">📊</div>
+            <div style="width:48px;height:48px;background:#FFFFFF22;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">📊</div>
             <div>
               <div style="font-family:Oswald;font-size:1.4rem;color:#E2E2F0;">Soy Inversionista</div>
               <div style="color:#8888AA;font-size:.85rem;">Quiero acceso al deal flow de ZXY.</div>
@@ -1300,13 +1412,13 @@
           <div style="margin-bottom:24px;">
             <div style="color:#E2E2F0;font-size:.85rem;font-weight:600;margin-bottom:12px;">ZXY Capital está respaldado por:</div>
             <div style="display:flex;flex-direction:column;gap:8px;">
-              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> VC Lab — Venture Capital Accelerator</div>
-              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> 37 inversiones • 3x MOIC histórico</div>
-              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> +5,000 contactos en el ecosistema</div>
-              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> Co-inversiones con Ángeles Inversionistas MX</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#FFFFFF;">→</span> VC Lab — Venture Capital Accelerator</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#FFFFFF;">→</span> 37 inversiones • 3x MOIC histórico</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#FFFFFF;">→</span> +5,000 contactos en el ecosistema</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#FFFFFF;">→</span> Co-inversiones con Ángeles Inversionistas MX</div>
             </div>
           </div>
-          <a href="https://decilehub.com" target="_blank" style="display:block;background:transparent;color:#6C63FF;border:1px solid #6C63FF;padding:14px 24px;border-radius:8px;text-align:center;font-family:Oswald;font-size:1rem;letter-spacing:.5px;text-decoration:none;margin-bottom:12px;">Ver Deal Flow en DecileHub →</a>
+          <a href="https://decilehub.com" target="_blank" style="display:block;background:transparent;color:#FFFFFF;border:1px solid #FFFFFF;padding:14px 24px;border-radius:8px;text-align:center;font-family:Oswald;font-size:1rem;letter-spacing:.5px;text-decoration:none;margin-bottom:12px;">Ver Deal Flow en DecileHub →</a>
           <a href="mailto:fran@zxy.vc?subject=Interés como inversionista ZXY" style="display:block;color:#8888AA;padding:10px 24px;border-radius:8px;text-align:center;font-size:.85rem;text-decoration:none;">O escríbenos: fran@zxy.vc</a>
         </div>
 
