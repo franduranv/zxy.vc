@@ -3,1112 +3,1045 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZXY Ventures — Agentic Venture Studio</title>
-  <meta name="description" content="ZXY Ventures — We solve problems to live in a ZXYFuture. Agentic Venture Studio en León, México." />
+  <title>ZXY Ventures — It's not Venture Capital. It's Venture Craft.</title>
+  <meta name="description" content="ZXY Ventures es un Agentic Venture Studio. Construimos empresas que son imposibles sin inteligencia artificial. Zone of eXponential Yields." />
+  <meta property="og:title" content="ZXY Ventures — It's Venture Craft." />
+  <meta property="og:description" content="Agentic Venture Studio. Construimos empresas imposibles sin IA." />
+  <meta property="og:url" content="https://zxy.vc" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* ==========================================
-       RESET & BASE
-    ========================================== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0A0A1A;
-      --bg-card: #12122A;
-      --bg-alt: #0F0F22;
-      --accent: #6C63FF;
-      --accent-hover: #8B85FF;
-      --text: #E2E2F0;
-      --text-secondary: #8888AA;
-      --border: #2A2A4A;
-      --font-heading: 'Oswald', sans-serif;
-      --font-body: 'Raleway', sans-serif;
+      --bg:       #0A0A1A;
+      --bg2:      #0F0F24;
+      --bg3:      #141430;
+      --accent:   #6C63FF;
+      --accent2:  #8B84FF;
+      --text:     #E2E2F0;
+      --muted:    #8888AA;
+      --border:   #2A2A4A;
+      --font-h:   'Oswald', sans-serif;
+      --font-b:   'Raleway', sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--text);
-      font-family: var(--font-body);
+      font-family: var(--font-b);
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.7;
       overflow-x: hidden;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
 
-    a:hover {
-      color: var(--accent-hover);
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    /* ==========================================
-       UTILITY
-    ========================================== */
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    .section-title {
-      font-family: var(--font-heading);
+    /* ─── UTILITIES ─── */
+    .container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 100px 0; }
+    .section-label {
+      font-family: var(--font-b);
       font-weight: 600;
-      font-size: clamp(1.75rem, 4vw, 2.75rem);
-      color: var(--text);
-      margin-bottom: 0.5rem;
-    }
-
-    .section-subtitle {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      max-width: 600px;
-      margin-bottom: 3rem;
-    }
-
-    .tag {
-      display: inline-block;
-      background: rgba(108, 99, 255, 0.12);
-      border: 1px solid rgba(108, 99, 255, 0.3);
-      color: var(--accent);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      font-size: 11px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      padding: 0.3rem 0.75rem;
-      border-radius: 100px;
-      margin-bottom: 0.75rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.75rem;
-      border-radius: 6px;
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-decoration: none;
-      border: none;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(108, 99, 255, 0.35);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
       color: var(--accent);
-      transform: translateY(-2px);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: var(--font-h);
+      font-weight: 600;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .section-sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.7;
     }
 
-    /* Fade-in animation */
+    /* ─── FADE-IN ANIMATION ─── */
     .fade-in {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
-
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
 
-    /* ==========================================
-       NAV
-    ========================================== */
-    #navbar {
+    /* ─── NAV ─── */
+    nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
       background: rgba(10, 10, 26, 0.85);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      transition: background 0.3s ease;
+      height: 68px;
+      display: flex;
+      align-items: center;
     }
-
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
-
     .nav-logo {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.7rem;
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      text-decoration: none;
+      font-family: var(--font-h);
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: 1px;
     }
-
-    .nav-logo:hover {
-      color: var(--accent-hover);
-    }
-
+    .nav-logo span { color: var(--accent); }
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 36px;
       list-style: none;
     }
-
     .nav-links a {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
+      font-family: var(--font-b);
       font-weight: 500;
-      letter-spacing: 0.03em;
-      transition: color 0.2s ease;
+      font-size: 14px;
+      color: var(--muted);
+      transition: color 0.2s;
     }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
+    .nav-links a:hover { color: var(--text); }
     .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+      background: var(--accent);
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      font-size: 13px !important;
+      transition: background 0.2s, transform 0.2s !important;
     }
-
-    .hamburger {
+    .nav-cta:hover { background: var(--accent2) !important; transform: translateY(-1px); }
+    .nav-hamburger {
       display: none;
       flex-direction: column;
-      justify-content: center;
       gap: 5px;
-      width: 36px;
-      height: 36px;
       cursor: pointer;
-      background: none;
-      border: none;
       padding: 4px;
     }
-
-    .hamburger span {
+    .nav-hamburger span {
       display: block;
-      width: 100%;
+      width: 24px;
       height: 2px;
       background: var(--text);
       border-radius: 2px;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
-
-    .hamburger.open span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    .hamburger.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.open span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    /* Mobile nav */
     .mobile-menu {
       display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 24px;
+      z-index: 99;
       flex-direction: column;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border);
-      padding: 1.25rem 1.25rem 1.5rem;
-      gap: 1rem;
+      gap: 16px;
     }
-
-    .mobile-menu.open {
-      display: flex;
-    }
-
+    .mobile-menu.open { display: flex; }
     .mobile-menu a {
-      color: var(--text-secondary);
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 500;
-      padding: 0.4rem 0;
+      color: var(--muted);
+      padding: 8px 0;
       border-bottom: 1px solid var(--border);
     }
-
-    .mobile-menu a:last-child {
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      text-align: center;
+      padding: 12px;
+      border-radius: 6px;
       border-bottom: none;
     }
 
-    .mobile-menu .btn-primary {
-      margin-top: 0.5rem;
-      text-align: center;
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
     }
 
-    /* ==========================================
-       HERO
-    ========================================== */
+    /* ─── HERO ─── */
     #hero {
-      padding: 140px 0 100px;
       min-height: 100vh;
       display: flex;
       align-items: center;
+      padding-top: 68px;
       position: relative;
       overflow: hidden;
     }
-
     #hero::before {
       content: '';
       position: absolute;
-      top: -20%;
-      left: -10%;
-      width: 60%;
-      height: 80%;
-      background: radial-gradient(ellipse at center, rgba(108, 99, 255, 0.12) 0%, transparent 70%);
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 900px;
+      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 65%);
       pointer-events: none;
     }
-
-    #hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: -10%;
-      width: 50%;
-      height: 60%;
-      background: radial-gradient(ellipse at center, rgba(108, 99, 255, 0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero-content {
+    .hero-inner {
       position: relative;
       z-index: 1;
-      max-width: 860px;
+      padding: 80px 0 100px;
     }
-
-    .hero-badge {
+    .hero-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: rgba(108, 99, 255, 0.1);
-      border: 1px solid rgba(108, 99, 255, 0.25);
-      color: var(--text-secondary);
-      font-size: 0.78rem;
-      font-weight: 500;
-      padding: 0.4rem 1rem;
+      gap: 8px;
+      background: rgba(108,99,255,0.12);
+      border: 1px solid rgba(108,99,255,0.3);
       border-radius: 100px;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.04em;
-    }
-
-    .hero-badge span {
-      color: var(--accent);
+      padding: 6px 16px;
+      font-size: 12px;
       font-weight: 600;
+      color: var(--accent2);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
     }
-
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
     .hero-headline {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: clamp(2.4rem, 7vw, 5.5rem);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      color: var(--text);
-      margin-bottom: 1.25rem;
+      font-family: var(--font-h);
+      font-weight: 600;
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: 1.0;
+      margin-bottom: 28px;
     }
-
-    .hero-headline .highlight {
-      color: var(--accent);
-    }
-
+    .hero-headline .line2 { color: var(--accent); }
     .hero-sub {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: var(--text-secondary);
-      font-weight: 500;
-      margin-bottom: 0.75rem;
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.7;
+      margin-bottom: 44px;
     }
-
-    .hero-tagline {
-      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-      color: var(--text-secondary);
-      font-style: italic;
-      margin-bottom: 2.5rem;
-      opacity: 0.8;
-    }
-
+    .hero-sub strong { color: var(--text); font-weight: 600; }
     .hero-ctas {
       display: flex;
+      gap: 16px;
       flex-wrap: wrap;
-      gap: 1rem;
     }
-
-    /* ==========================================
-       STUDIO OVERVIEW
-    ========================================== */
-    #studio {
-      padding: 80px 0;
-      background: var(--bg-alt);
-    }
-
-    .studio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .studio-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .studio-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(108, 99, 255, 0.15);
-    }
-
-    .studio-card-icon {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .studio-card h3 {
-      font-family: var(--font-heading);
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-family: var(--font-b);
       font-weight: 600;
-      font-size: 1.3rem;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
-
-    .studio-card p {
-      color: var(--text-secondary);
-      font-size: 0.95rem;
+    .btn-primary:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(108,99,255,0.35);
     }
-
-    /* ==========================================
-       PROJECTS
-    ========================================== */
-    #proyectos {
-      padding: 100px 0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 2rem 2.25rem;
-      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1.5rem;
-      align-items: start;
-    }
-
-    .project-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(108, 99, 255, 0.15);
-    }
-
-    .project-main h3 {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 1.45rem;
+    .btn-secondary {
+      background: transparent;
       color: var(--text);
-      margin-bottom: 1rem;
-    }
-
-    .project-problem,
-    .project-solution {
-      margin-bottom: 0.75rem;
-    }
-
-    .project-label {
-      font-size: 0.75rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-family: var(--font-b);
       font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin-bottom: 0.2rem;
+      font-size: 15px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
     }
-
-    .project-text {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.55;
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
     }
-
-    .project-side {
+    .hero-badge {
+      position: absolute;
+      top: 60px; right: 0;
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      gap: 1rem;
-      min-width: 160px;
+      gap: 10px;
     }
-
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.85rem;
+    .badge-pill {
+      background: var(--bg3);
+      border: 1px solid var(--border);
       border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 600;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
       white-space: nowrap;
     }
-
-    .status-live {
-      background: rgba(34, 197, 94, 0.12);
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      color: #4ade80;
+    .badge-pill span { color: var(--accent); font-weight: 600; }
+    @media (max-width: 900px) {
+      .hero-badge { display: none; }
     }
 
-    .status-building {
-      background: rgba(251, 191, 36, 0.1);
-      border: 1px solid rgba(251, 191, 36, 0.3);
-      color: #fbbf24;
+    /* ─── STATS BAR ─── */
+    #stats {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 0;
     }
-
-    .project-cta-link {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: color 0.2s ease, gap 0.2s ease;
-    }
-
-    .project-cta-link:hover {
-      color: var(--accent-hover);
-      gap: 0.5rem;
-    }
-
-    /* ==========================================
-       EQUIPO
-    ========================================== */
-    #equipo {
-      padding: 100px 0;
-      background: var(--bg-alt);
-    }
-
-    .founder-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 2.5rem;
-      display: flex;
-      gap: 2rem;
-      align-items: flex-start;
-      margin-bottom: 3rem;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .founder-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 12px 32px rgba(108, 99, 255, 0.15);
-    }
-
-    .founder-avatar {
-      width: 90px;
-      height: 90px;
-      min-width: 90px;
-      border-radius: 50%;
-      background: rgba(108, 99, 255, 0.15);
-      border: 2px solid var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--accent);
-    }
-
-    .founder-info h3 {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: var(--text);
-      margin-bottom: 0.2rem;
-    }
-
-    .founder-title {
-      color: var(--accent);
-      font-size: 0.88rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 0.85rem;
-    }
-
-    .founder-bio {
-      color: var(--text-secondary);
-      font-size: 0.96rem;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .founder-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .founder-links a {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    .agent-os-section {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 2.5rem;
-    }
-
-    .agent-os-header {
-      margin-bottom: 1.25rem;
-    }
-
-    .agent-os-header h3 {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 1.6rem;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-    }
-
-    .agent-os-header p {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      max-width: 680px;
-      line-height: 1.65;
-      margin-bottom: 1.5rem;
-    }
-
-    .agents-grid {
+    .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
     }
-
-    .agent-card {
-      background: var(--bg-alt);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.25rem 1rem;
+    .stat-item {
       text-align: center;
-      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px 24px;
+      border-right: 1px solid var(--border);
     }
-
-    .agent-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(108, 99, 255, 0.15);
-    }
-
-    .agent-emoji {
-      font-size: 1.75rem;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .agent-name {
-      font-family: var(--font-heading);
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: var(--font-h);
       font-weight: 600;
-      font-size: 1rem;
-      color: var(--text);
-      margin-bottom: 0.2rem;
-    }
-
-    .agent-role {
-      font-size: 0.72rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-    }
-
-    .agent-os-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(108, 99, 255, 0.1);
-      border: 1px solid rgba(108, 99, 255, 0.25);
+      font-size: clamp(36px, 5vw, 56px);
       color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.4rem 1rem;
-      border-radius: 100px;
-      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 640px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3) { border-right: 1px solid var(--border); border-top: 1px solid var(--border); }
+      .stat-item:nth-child(4) { border-right: none; border-top: 1px solid var(--border); }
     }
 
-    .pulse-dot {
-      width: 7px;
-      height: 7px;
-      background: #4ade80;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    /* ==========================================
-       RESEARCH
-    ========================================== */
-    #research {
-      padding: 100px 0;
-    }
-
-    .research-grid {
+    /* ─── VENTURES ─── */
+    #ventures { background: var(--bg); }
+    .ventures-header { margin-bottom: 64px; }
+    .ventures-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
     }
-
-    .research-card {
-      background: var(--bg-card);
+    .venture-card {
+      background: var(--bg2);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.75rem;
-      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
+      padding: 32px;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
     }
-
-    .research-card:hover {
-      border-color: var(--accent);
+    .venture-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .venture-card:hover {
+      border-color: rgba(108,99,255,0.4);
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(108, 99, 255, 0.15);
+      box-shadow: 0 12px 48px rgba(108,99,255,0.1);
     }
-
-    .research-icon {
-      font-size: 1.5rem;
-    }
-
-    .research-card h3 {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 1.15rem;
-      color: var(--text);
-    }
-
-    .research-card p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      flex: 1;
-    }
-
-    .research-link {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      margin-top: 0.25rem;
-      transition: color 0.2s ease, gap 0.2s ease;
-    }
-
-    .research-link:hover {
-      color: var(--accent-hover);
-      gap: 0.5rem;
-    }
-
-    /* ==========================================
-       CTA FINAL
-    ========================================== */
-    #contacto {
-      padding: 100px 0;
-      background: var(--bg-alt);
-      text-align: center;
-    }
-
-    .cta-wrapper {
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    .cta-headline {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      color: var(--text);
-      margin-bottom: 0.75rem;
-    }
-
-    .cta-sub {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .cta-buttons {
+    .venture-card:hover::before { opacity: 1; }
+    .venture-card-top {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    /* ==========================================
-       FOOTER
-    ========================================== */
-    footer {
-      background: var(--bg);
-      border-top: 1px solid var(--border);
-      padding: 2.5rem 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 1.25rem;
+      margin-bottom: 20px;
     }
-
-    .footer-logo {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--accent);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.25rem;
-      list-style: none;
-    }
-
-    .footer-links a {
-      color: var(--text-secondary);
-      font-size: 0.88rem;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links a:hover {
-      color: var(--text);
-    }
-
-    .footer-right {
-      text-align: right;
-    }
-
-    .footer-copy {
-      color: var(--text-secondary);
-      font-size: 0.8rem;
-    }
-
-    .footer-tagline {
-      color: var(--accent);
-      font-size: 0.75rem;
+    .venture-sector {
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.06em;
-      margin-top: 0.25rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .venture-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+    .badge-operando {
+      background: rgba(34, 197, 94, 0.12);
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+    .badge-live {
+      background: rgba(108,99,255,0.15);
+      color: var(--accent2);
+      border: 1px solid rgba(108,99,255,0.3);
+    }
+    .badge-dev {
+      background: rgba(251, 191, 36, 0.1);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.2);
+    }
+    .venture-name {
+      font-family: var(--font-h);
+      font-weight: 600;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    .venture-tagline {
+      font-size: 13px;
+      color: var(--accent2);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .venture-problem, .venture-solution {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .venture-problem { color: var(--muted); }
+    .venture-solution { color: var(--text); }
+    .venture-problem-label, .venture-solution-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .venture-problem-label { color: var(--muted); }
+    .venture-solution-label { color: var(--accent); }
+    .venture-footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .venture-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .venture-link:hover { gap: 10px; }
+    .venture-lab-note {
+      font-size: 11px;
+      color: var(--muted);
+      font-style: italic;
     }
 
-    /* ==========================================
-       RESPONSIVE
-    ========================================== */
-    @media (max-width: 768px) {
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
+    /* ─── AGENT OS ─── */
+    #agente {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .agente-header { margin-bottom: 64px; max-width: 680px; }
+    .agente-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+    .agent-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 20px;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .agent-card:hover {
+      border-color: rgba(108,99,255,0.4);
+      transform: translateY(-3px);
+    }
+    .agent-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #9C94FF);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-h);
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .agent-name {
+      font-family: var(--font-h);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .agent-role {
+      font-size: 12px;
+      color: var(--accent2);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .agent-spec {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .agente-quote {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 32px 36px;
+      max-width: 720px;
+    }
+    .agente-quote p {
+      font-family: var(--font-h);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    .agente-quote .highlight { color: var(--accent); }
 
-      .hamburger {
-        display: flex;
-      }
+    /* ─── EQUIPO ─── */
+    #equipo { background: var(--bg); }
+    .equipo-header { margin-bottom: 64px; }
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .equipo-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .equipo-card:hover {
+      border-color: rgba(108,99,255,0.4);
+      transform: translateY(-4px);
+    }
+    .equipo-card-top {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .equipo-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #1A1A3A, var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-h);
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .equipo-name {
+      font-family: var(--font-h);
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .equipo-role {
+      font-size: 13px;
+      color: var(--accent2);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .equipo-bio {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .equipo-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .equipo-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      border: 1px solid rgba(108,99,255,0.3);
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .equipo-link:hover {
+      background: rgba(108,99,255,0.1);
+    }
+    .agente-os-card {
+      background: linear-gradient(135deg, #0F0F2A, #1A1A3A);
+      border: 1px solid rgba(108,99,255,0.3);
+    }
+    .agente-os-card .equipo-avatar {
+      background: linear-gradient(135deg, var(--accent), #9C94FF);
+    }
+    .agente-os-card .equipo-bio { color: var(--text); }
 
-      .project-card {
-        grid-template-columns: 1fr;
-      }
-
-      .project-side {
-        align-items: flex-start;
-        flex-direction: row;
-        flex-wrap: wrap;
-        min-width: unset;
-      }
-
-      .founder-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .founder-links {
-        justify-content: center;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer-right {
-        text-align: center;
-      }
-
-      #hero {
-        padding: 110px 0 80px;
-        min-height: unset;
-      }
-
-      .hero-ctas {
-        flex-direction: column;
-      }
-
-      .hero-ctas .btn {
-        text-align: center;
-      }
+    /* ─── RESEARCH ─── */
+    #research {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+    }
+    .research-header { margin-bottom: 64px; }
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .research-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      transition: border-color 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .research-card:hover {
+      border-color: rgba(108,99,255,0.4);
+      transform: translateY(-4px);
+    }
+    .research-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(108,99,255,0.12);
+      border: 1px solid rgba(108,99,255,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+    .research-title {
+      font-family: var(--font-h);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .research-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+    .research-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+      align-self: flex-start;
+    }
+    .research-link:hover { gap: 10px; }
+    .research-no-link {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
     }
 
-    @media (min-width: 900px) {
-      .projects-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .projects-grid .project-card:first-child {
-        grid-column: 1 / -1;
-      }
+    /* ─── CONTACTO ─── */
+    #contacto { background: var(--bg); }
+    .contacto-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
     }
+    .contacto-inner .section-title { margin-bottom: 16px; }
+    .contacto-inner .section-sub {
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .contact-form {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: left;
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .form-input, .form-textarea {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-family: var(--font-b);
+      font-size: 15px;
+      color: var(--text);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--accent);
+    }
+    .form-textarea { resize: vertical; min-height: 120px; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 540px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-submit {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 16px;
+      border-radius: 8px;
+      font-family: var(--font-b);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+    }
+    .contact-alt {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .contact-alt a {
+      color: var(--accent);
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .contact-alt a:hover { color: var(--accent2); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 56px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .nav-logo {
+      font-size: 24px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .footer-tagline {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .footer-tagline strong { color: var(--text); }
+    .footer-links h4 {
+      font-family: var(--font-h);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 14px;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer-copy span { color: var(--accent); }
+    @media (max-width: 640px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ─── SCROLLBAR ─── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+    /* ─── SELECTION ─── */
+    ::selection { background: rgba(108,99,255,0.3); color: var(--text); }
   </style>
 </head>
 <body>
 
-  <!-- ==========================================
-       NAV
-  ========================================== -->
-  <header id="navbar">
-    <div class="container">
-      <nav class="nav-inner">
-        <a href="#" class="nav-logo">ZXY</a>
-        <ul class="nav-links">
-          <li><a href="#studio">Studio</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <div class="nav-cta">
-          <a href="mailto:fran@zxy.vc" class="btn btn-primary">Trabajar con nosotros</a>
-        </div>
-        <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
+  <!-- ─── NAV ─── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><span>ZXY</span> Ventures</a>
+      <ul class="nav-links">
+        <li><a href="#ventures">Ventures</a></li>
+        <li><a href="#agente">Agent OS</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#contacto" class="nav-cta">Trabaja con nosotros</a></li>
+      </ul>
+      <div class="nav-hamburger" id="hamburger" aria-label="Menú" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
     </div>
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#studio">Studio</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#equipo">Equipo</a>
-      <a href="#research">Research</a>
-      <a href="#contacto">Contacto</a>
-      <a href="mailto:fran@zxy.vc" class="btn btn-primary">Trabajar con nosotros</a>
-    </div>
-  </header>
+  </nav>
 
-  <!-- ==========================================
-       HERO
-  ========================================== -->
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#ventures" class="mobile-link">Ventures</a>
+    <a href="#agente" class="mobile-link">Agent OS</a>
+    <a href="#research" class="mobile-link">Research</a>
+    <a href="#equipo" class="mobile-link">Equipo</a>
+    <a href="#contacto" class="mobile-link">Contacto</a>
+    <a href="#contacto" class="nav-cta">Trabaja con nosotros</a>
+  </div>
+
+  <!-- ─── HERO ─── -->
   <section id="hero">
     <div class="container">
-      <div class="hero-content fade-in">
-        <div class="hero-badge">
-          <span>ZXY</span> = Zone of eXponential Yields = "Sexy"
-        </div>
-        <h1 class="hero-headline">
-          WE SOLVE PROBLEMS<br />
-          TO LIVE IN A <span class="highlight">ZXY</span>FUTURE
+      <div class="hero-inner">
+        <div class="hero-eyebrow fade-in">Agentic Venture Studio · León, México</div>
+        <h1 class="hero-headline fade-in fade-in-delay-1">
+          It's not<br>Venture Capital.<br>
+          <span class="line2">It's Venture Craft.</span>
         </h1>
-        <p class="hero-sub">Agentic Venture Studio — León, México → LatAm → World</p>
-        <p class="hero-tagline">It's not Venture Capital. It's Venture Craft.</p>
-        <div class="hero-ctas">
-          <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-          <a href="#equipo" class="btn btn-outline">Conocer el Equipo</a>
+        <p class="hero-sub fade-in fade-in-delay-2">
+          Construimos empresas que son imposibles sin inteligencia artificial.<br>
+          Nuestro unfair advantage: <strong>Agent OS</strong> — el equipo fundador que trabaja 24/7 desde el día cero.
+        </p>
+        <div class="hero-ctas fade-in fade-in-delay-3">
+          <a href="#ventures" class="btn-primary">Ver Ventures</a>
+          <a href="#agente" class="btn-secondary">Conocer Agent OS →</a>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <div class="badge-pill"><span>ZXY</span> = Zone of eXponential Yields</div>
+        <div class="badge-pill"><span>ZXY</span> = Sexy</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS BAR ─── -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Agentes activos 24/7</div>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-1">
+          <div class="stat-number">$0</div>
+          <div class="stat-label">CAC en primer cliente</div>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-2">
+          <div class="stat-number">30</div>
+          <div class="stat-label">Días de idea a revenue</div>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-3">
+          <div class="stat-number">100x</div>
+          <div class="stat-label">Ventures únicamente</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       STUDIO OVERVIEW
-  ========================================== -->
-  <section id="studio">
+  <!-- ─── VENTURES ─── -->
+  <section id="ventures" class="section">
     <div class="container">
-      <h2 class="section-title fade-in">El Ecosistema ZXY</h2>
-      <p class="section-subtitle fade-in">Tres capas. Una visión. Infinitas posibilidades.</p>
-      <div class="studio-grid">
-        <div class="studio-card fade-in">
-          <div class="studio-card-icon">🏗️</div>
-          <h3>ZXY Studio</h3>
-          <p>Donde nacen los ventures. Concepto, validación, construcción y lanzamiento de productos agenticos que resuelven problemas reales en LatAm.</p>
-        </div>
-        <div class="studio-card fade-in">
-          <div class="studio-card-icon">💼</div>
-          <h3>ZXY Capital</h3>
-          <p>El vehículo de inversión. Co-invertimos en founders con Founder-Market Fit genuino y visión de largo plazo en México y América Latina.</p>
-        </div>
-        <div class="studio-card fade-in">
-          <div class="studio-card-icon">🌐</div>
-          <h3>ZXY Club</h3>
-          <p>La comunidad. Un ecosistema de founders, operadores e inversionistas comprometidos con construir el futuro desde México.</p>
-        </div>
+      <div class="ventures-header fade-in">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Ventures ZXY</h2>
+        <p class="section-sub">Problemas reales, soluciones agénticas. Cada venture nace de investigación rigurosa y opera con Agent OS desde el día cero.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       PROYECTOS ACTIVOS
-  ========================================== -->
-  <section id="proyectos">
-    <div class="container">
-      <h2 class="section-title fade-in">Proyectos Activos</h2>
-      <p class="section-subtitle fade-in">Deal memos. No decks vacíos — ventures reales con tracción real.</p>
-      <div class="projects-grid">
+      <div class="ventures-grid">
 
         <!-- BaW -->
-        <div class="project-card fade-in">
-          <div class="project-main">
-            <div class="tag">En Operación · PropTech · León, México</div>
-            <h3>BaW: Gestión Híbrida de Propiedades</h3>
-            <div class="project-problem">
-              <p class="project-label">Problema</p>
-              <p class="project-text">La gestión de propiedades de renta corta requiere múltiples herramientas, procesos manuales y coordinación constante.</p>
-            </div>
-            <div class="project-solution">
-              <p class="project-label">Solución</p>
-              <p class="project-text">Sistema operativo agentico para property managers — automatizando comunicación con huéspedes, pricing dinámico y coordinación de operaciones.</p>
-            </div>
+        <div class="venture-card fade-in">
+          <div class="venture-card-top">
+            <span class="venture-sector">PropTech · Cashflow Engine</span>
+            <span class="venture-badge badge-operando">OPERANDO</span>
           </div>
-          <div class="project-side">
-            <span class="status-badge status-live">✅ Operando y generando cashflow</span>
-            <a href="https://baw.mx" target="_blank" rel="noopener" class="project-cta-link">baw.mx →</a>
+          <div class="venture-name">BaW</div>
+          <div class="venture-tagline">Hybrid Property Management</div>
+          <div class="venture-problem">
+            <div class="venture-problem-label">Problema</div>
+            La gestión de propiedades vacacionales es fragmentada — 10 herramientas, sin integración, operación manual.
+          </div>
+          <div class="venture-solution">
+            <div class="venture-solution-label">Solución agéntica</div>
+            Sistema híbrido de property management generando $100K+ MXN/mes en León, Gto.
+          </div>
+          <div class="venture-footer">
+            <a href="https://baw.mx" target="_blank" rel="noopener" class="venture-link">baw.mx →</a>
+            <span class="venture-lab-note">Laboratorio real de ZXY</span>
           </div>
         </div>
 
         <!-- ContaBeto -->
-        <div class="project-card fade-in">
-          <div class="project-main">
-            <div class="tag">En Operación · FinTech · México</div>
-            <h3>ContaBeto: Tu Contador Digital por WhatsApp</h3>
-            <div class="project-problem">
-              <p class="project-label">Problema</p>
-              <p class="project-text">Las PyMEs mexicanas pagan $3K–15K MXN/mes a contadores por tareas repetitivas. El SAT es complejo y los errores cuestan caro.</p>
-            </div>
-            <div class="project-solution">
-              <p class="project-label">Solución</p>
-              <p class="project-text">Agente de WhatsApp que maneja facturación, declaraciones y compliance fiscal de forma automatizada e inteligente.</p>
-            </div>
+        <div class="venture-card fade-in fade-in-delay-1">
+          <div class="venture-card-top">
+            <span class="venture-sector">FinTech · Contador AI</span>
+            <span class="venture-badge badge-live">LIVE</span>
           </div>
-          <div class="project-side">
-            <span class="status-badge status-live">✅ Live — primeros clientes</span>
-            <a href="https://contabeto.zxy.vc" target="_blank" rel="noopener" class="project-cta-link">contabeto.zxy.vc →</a>
+          <div class="venture-name">ContaBeto</div>
+          <div class="venture-tagline">Agente de Contabilidad</div>
+          <div class="venture-problem">
+            <div class="venture-problem-label">Problema</div>
+            Las PyMEs pagan $3,000–15,000 MXN/mes a contadores para tareas 90% repetitivas.
+          </div>
+          <div class="venture-solution">
+            <div class="venture-solution-label">Solución agéntica</div>
+            Agente de contabilidad por WhatsApp — declaraciones, CFDI y compliance fiscal autónomo.
+          </div>
+          <div class="venture-footer">
+            <a href="https://contabeto.zxy.vc" target="_blank" rel="noopener" class="venture-link">contabeto.zxy.vc →</a>
           </div>
         </div>
 
         <!-- AudiBot -->
-        <div class="project-card fade-in">
-          <div class="project-main">
-            <div class="tag">En Construcción · FinTech/LegalTech · México</div>
-            <h3>AudiBot: Compliance Fiscal Preventivo SAT</h3>
-            <div class="project-problem">
-              <p class="project-label">Problema</p>
-              <p class="project-text">El SAT lanzó FISCALIA 2.0. +300% en auditorías. Las PyMEs reaccionan cuando ya es tarde.</p>
-            </div>
-            <div class="project-solution">
-              <p class="project-label">Solución</p>
-              <p class="project-text">Agente que verifica RFC en lista 69-B, analiza CFDIs y genera reportes preventivos de riesgo fiscal antes de que el SAT toque tu puerta.</p>
-            </div>
+        <div class="venture-card fade-in fade-in-delay-2">
+          <div class="venture-card-top">
+            <span class="venture-sector">LegalTech · Compliance SAT</span>
+            <span class="venture-badge badge-dev">EN DESARROLLO</span>
           </div>
-          <div class="project-side">
-            <span class="status-badge status-building">🚧 Building — beta en León</span>
-            <a href="/audibot" class="project-cta-link">Ver más →</a>
+          <div class="venture-name">AudiBot</div>
+          <div class="venture-tagline">Compliance SAT Autónomo</div>
+          <div class="venture-problem">
+            <div class="venture-problem-label">Problema</div>
+            El SAT lanzó FISCALIA 2.0 — +300% auditorías para 2026. Las PyMEs no lo saben hasta que es tarde.
+          </div>
+          <div class="venture-solution">
+            <div class="venture-solution-label">Solución agéntica</div>
+            Agente que verifica el 69-B, analiza CFDIs y entrega reporte semanal de riesgo fiscal.
+          </div>
+          <div class="venture-footer">
+            <a href="https://audibot.zxy.vc" target="_blank" rel="noopener" class="venture-link">audibot.zxy.vc →</a>
           </div>
         </div>
 
         <!-- ContratosAI -->
-        <div class="project-card fade-in">
-          <div class="project-main">
-            <div class="tag">En Construcción · LegalTech · México</div>
-            <h3>ContratosAI: Contratos Legales para PyMEs en Minutos</h3>
-            <div class="project-problem">
-              <p class="project-label">Problema</p>
-              <p class="project-text">4.9M PyMEs operan sin contratos formales. $15,000 MXN por contrato con abogado. Una demanda laboral: $500,000 MXN.</p>
-            </div>
-            <div class="project-solution">
-              <p class="project-label">Solución</p>
-              <p class="project-text">Agente conversacional que genera contratos válidos en México (LFT, Código Civil) con firma electrónica NOM-151.</p>
-            </div>
+        <div class="venture-card fade-in">
+          <div class="venture-card-top">
+            <span class="venture-sector">LegalTech · Contratos</span>
+            <span class="venture-badge badge-dev">EN DESARROLLO</span>
           </div>
-          <div class="project-side">
-            <span class="status-badge status-building">🚧 Building — beta en León</span>
-            <a href="/contratos" class="project-cta-link">Ver más →</a>
+          <div class="venture-name">ContratosAI</div>
+          <div class="venture-tagline">Contratos Válidos en Minutos</div>
+          <div class="venture-problem">
+            <div class="venture-problem-label">Problema</div>
+            4.9M PyMEs sin contratos formales. Un abogado cobra $15,000 MXN por un contrato estándar.
+          </div>
+          <div class="venture-solution">
+            <div class="venture-solution-label">Solución agéntica</div>
+            Agente conversacional que genera contratos válidos en México en minutos.
+          </div>
+          <div class="venture-footer">
+            <a href="https://contratos.zxy.vc" target="_blank" rel="noopener" class="venture-link">contratos.zxy.vc →</a>
           </div>
         </div>
 
         <!-- SkillAgent -->
-        <div class="project-card fade-in">
-          <div class="project-main">
-            <div class="tag">En Construcción · EdTech · México → LatAm</div>
-            <h3>SkillAgent: Capacitación Corporativa en AI para Empresas</h3>
-            <div class="project-problem">
-              <p class="project-label">Problema</p>
-              <p class="project-text">91% de empresas con AI reportan crecimiento. Solo 16% de empleados en LatAm la usan diariamente. El gap cuesta $1.2B USD en productividad.</p>
-            </div>
-            <div class="project-solution">
-              <p class="project-label">Solución</p>
-              <p class="project-text">Tutor AI personalizado por empleado. Currículo adaptativo. Contexto México. $20 USD/persona/mes.</p>
-            </div>
+        <div class="venture-card fade-in fade-in-delay-1">
+          <div class="venture-card-top">
+            <span class="venture-sector">EdTech · Capacitación AI</span>
+            <span class="venture-badge badge-dev">EN DESARROLLO</span>
           </div>
-          <div class="project-side">
-            <span class="status-badge status-building">🚧 Building — piloto con empresa ancla</span>
-            <a href="/skill" class="project-cta-link">Ver más →</a>
+          <div class="venture-name">SkillAgent</div>
+          <div class="venture-tagline">Tutor AI por Empleado</div>
+          <div class="venture-problem">
+            <div class="venture-problem-label">Problema</div>
+            91% de empresas con AI reportan crecimiento. Solo 16% de empleados LatAm la usan diariamente.
+          </div>
+          <div class="venture-solution">
+            <div class="venture-solution-label">Solución agéntica</div>
+            Tutor AI personalizado por empleado. Currículo adaptativo. Certificados. $20 USD/persona/mes.
+          </div>
+          <div class="venture-footer">
+            <a href="https://skill.zxy.vc" target="_blank" rel="noopener" class="venture-link">skill.zxy.vc →</a>
           </div>
         </div>
 
@@ -1116,169 +1049,223 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       EQUIPO
-  ========================================== -->
-  <section id="equipo">
+  <!-- ─── AGENT OS ─── -->
+  <section id="agente" class="section">
     <div class="container">
-      <h2 class="section-title fade-in">El Equipo</h2>
-      <p class="section-subtitle fade-in">Humanos con visión. Agentes con ejecución. Juntos, imparables.</p>
-
-      <!-- Fran Durán -->
-      <div class="founder-card fade-in">
-        <div class="founder-avatar">FD</div>
-        <div class="founder-info">
-          <h3>Fran Durán</h3>
-          <p class="founder-title">Founder &amp; Managing Partner</p>
-          <p class="founder-bio">Arquitecto. Emprendedor. Tecnólogo. 12+ años transformando educación e industria en México. Profesor en el Tec de Monterrey. Alumni Singularity University Cohort 8. Construyendo el future desde León, Guanajuato.</p>
-          <div class="founder-links">
-            <a href="https://franduran.com" target="_blank" rel="noopener">🌐 franduran.com</a>
-            <a href="https://www.linkedin.com/in/franduran/" target="_blank" rel="noopener">💼 LinkedIn</a>
-          </div>
+      <div class="agente-header fade-in">
+        <div class="section-label">Infraestructura Propietaria</div>
+        <h2 class="section-title">Agent OS —<br>El Equipo que Nadie Más Tiene</h2>
+        <p class="section-sub">
+          No contratamos. No hacemos onboarding. No descansamos.<br>
+          Agent OS es el núcleo tecnológico de ZXY — el sistema propietario de inteligencia operativa disponible desde el primer día de cualquier venture.
+        </p>
+      </div>
+      <div class="agente-grid">
+        <div class="agent-card fade-in">
+          <div class="agent-avatar">H</div>
+          <div class="agent-name">Hugo</div>
+          <div class="agent-role">Chief of Staff</div>
+          <div class="agent-spec">Coordination &amp; Ops</div>
+        </div>
+        <div class="agent-card fade-in fade-in-delay-1">
+          <div class="agent-avatar">R</div>
+          <div class="agent-name">Rafa</div>
+          <div class="agent-role">Research</div>
+          <div class="agent-spec">Market Intelligence</div>
+        </div>
+        <div class="agent-card fade-in fade-in-delay-2">
+          <div class="agent-avatar">A</div>
+          <div class="agent-name">Andrés</div>
+          <div class="agent-role">Build</div>
+          <div class="agent-spec">Code &amp; Tech</div>
+        </div>
+        <div class="agent-card fade-in fade-in-delay-3">
+          <div class="agent-avatar">L</div>
+          <div class="agent-name">Luis</div>
+          <div class="agent-role">Growth</div>
+          <div class="agent-spec">Content &amp; Channels</div>
+        </div>
+        <div class="agent-card fade-in">
+          <div class="agent-avatar">M</div>
+          <div class="agent-name">Maribel</div>
+          <div class="agent-role">Legal</div>
+          <div class="agent-spec">Contracts &amp; Compliance</div>
+        </div>
+        <div class="agent-card fade-in fade-in-delay-1">
+          <div class="agent-avatar">B</div>
+          <div class="agent-name">Beto</div>
+          <div class="agent-role">Finance</div>
+          <div class="agent-spec">Unit Economics</div>
+        </div>
+        <div class="agent-card fade-in fade-in-delay-2">
+          <div class="agent-avatar">E</div>
+          <div class="agent-name">Emily</div>
+          <div class="agent-role">Comms</div>
+          <div class="agent-spec">Stakeholder Relations</div>
         </div>
       </div>
+      <div class="agente-quote fade-in">
+        <p>"Agent OS costs <span class="highlight">$15K MXN/month</span>. The equivalent human team: <span class="highlight">$500K MXN/month</span>."</p>
+      </div>
+    </div>
+  </section>
 
-      <!-- Agent OS -->
-      <div class="agent-os-section fade-in">
-        <div class="agent-os-header">
-          <h3>Agent OS — El Equipo que Cambia las Reglas</h3>
-          <p>Mientras otros estudios tardan meses en ensamblar un equipo, ZXY tiene su equipo desde el día cero. Agent OS es nuestra ventaja injusta: un sistema de agentes especializados que trabaja 24/7, aprende con cada venture y multiplica la capacidad de ejecución de manera exponencial. No es una herramienta. Es un equipo.</p>
-        </div>
-        <div class="agents-grid">
-          <div class="agent-card">
-            <span class="agent-emoji">🎯</span>
-            <p class="agent-name">Hugo</p>
-            <p class="agent-role">Chief of Staff</p>
+  <!-- ─── EQUIPO ─── -->
+  <section id="equipo" class="section">
+    <div class="container">
+      <div class="equipo-header fade-in">
+        <div class="section-label">Las personas detrás</div>
+        <h2 class="section-title">Quiénes somos</h2>
+      </div>
+      <div class="equipo-grid">
+        <div class="equipo-card fade-in">
+          <div class="equipo-card-top">
+            <div class="equipo-avatar">FD</div>
+            <div>
+              <div class="equipo-name">Fran Durán</div>
+              <div class="equipo-role">Founder &amp; CEO</div>
+            </div>
           </div>
-          <div class="agent-card">
-            <span class="agent-emoji">🔬</span>
-            <p class="agent-name">Rafa</p>
-            <p class="agent-role">Research</p>
-          </div>
-          <div class="agent-card">
-            <span class="agent-emoji">⚡</span>
-            <p class="agent-name">Andrés</p>
-            <p class="agent-role">Build</p>
-          </div>
-          <div class="agent-card">
-            <span class="agent-emoji">📈</span>
-            <p class="agent-name">Luis</p>
-            <p class="agent-role">Growth</p>
-          </div>
-          <div class="agent-card">
-            <span class="agent-emoji">⚖️</span>
-            <p class="agent-name">Maribel</p>
-            <p class="agent-role">Legal</p>
-          </div>
-          <div class="agent-card">
-            <span class="agent-emoji">💰</span>
-            <p class="agent-name">Beto</p>
-            <p class="agent-role">Finance</p>
-          </div>
-          <div class="agent-card">
-            <span class="agent-emoji">📣</span>
-            <p class="agent-name">Emily</p>
-            <p class="agent-role">Comms</p>
+          <p class="equipo-bio">
+            Arquitecto de formación, emprendedor por convicción. 12+ años construyendo ecosistemas de innovación en México. Alumni Singularity University. Profesor de emprendimiento en el Tec de Monterrey Campus León. Visionary, Architect, Builder.
+          </p>
+          <div class="equipo-links">
+            <a href="https://franduran.com" target="_blank" rel="noopener" class="equipo-link">franduran.com</a>
+            <a href="https://linkedin.com/in/franduran" target="_blank" rel="noopener" class="equipo-link">LinkedIn</a>
           </div>
         </div>
-        <div class="agent-os-badge">
-          <div class="pulse-dot"></div>
-          Disponible desde el Día 0 · Operando 24/7
+        <div class="equipo-card agente-os-card fade-in fade-in-delay-1">
+          <div class="equipo-card-top">
+            <div class="equipo-avatar">OS</div>
+            <div>
+              <div class="equipo-name">Agent OS</div>
+              <div class="equipo-role">El equipo que no duerme</div>
+            </div>
+          </div>
+          <p class="equipo-bio">
+            La infraestructura que hace posibles los ventures imposibles. 7 sistemas especializados de inteligencia operativa — disponibles 24/7, desde el día cero de cualquier venture.
+          </p>
+          <div class="equipo-links">
+            <a href="#agente" class="equipo-link">Conocer Agent OS →</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       RESEARCH
-  ========================================== -->
-  <section id="research">
+  <!-- ─── RESEARCH ─── -->
+  <section id="research" class="section">
     <div class="container">
-      <h2 class="section-title fade-in">Big Ideas &amp; Research</h2>
-      <p class="section-subtitle fade-in">Tomamos decisiones con data, no con intuición. Cada venture nace de investigación profunda. Nuestros reports cubren tendencias, mercados y oportunidades en LatAm.</p>
+      <div class="research-header fade-in">
+        <div class="section-label">Evidencia &amp; Frameworks</div>
+        <h2 class="section-title">Actuamos con evidencia</h2>
+        <p class="section-sub">No construimos sobre intuición. Cada venture pasa por investigación rigurosa antes de recibir un Go.</p>
+      </div>
       <div class="research-grid">
         <div class="research-card fade-in">
-          <div class="research-icon">💡</div>
-          <h3>ZXY Big Ideas 2026</h3>
-          <p>Las tendencias, oportunidades y tesis de inversión que definen nuestra estrategia para el próximo ciclo.</p>
-          <a href="https://gamma.app/docs/tur9lri83bup50j" target="_blank" rel="noopener" class="research-link">Leer report →</a>
-        </div>
-        <div class="research-card fade-in">
-          <div class="research-icon">🏘️</div>
-          <h3>Análisis: Ecosistema PropTech México</h3>
-          <p>Deep dive en el mercado de PropTech en México — oportunidades, gaps y el rol de la IA en la transformación del real estate.</p>
-          <a href="#research" class="research-link">Próximamente →</a>
-        </div>
-        <div class="research-card fade-in">
           <div class="research-icon">📊</div>
-          <h3>Análisis: LegalTech &amp; FinTech PyMEs LatAm</h3>
-          <p>El mercado desatendido de 4.9M PyMEs en México y las oportunidades en legal tech y servicios financieros agenticos.</p>
-          <a href="#research" class="research-link">Próximamente →</a>
+          <div class="research-title">ZXY Big Ideas 2026</div>
+          <p class="research-desc">Las oportunidades más grandes en Agentic Venture Building en LatAm. El mapa de lo que viene.</p>
+          <a href="https://gamma.app/docs/tur9lri83bup50j" target="_blank" rel="noopener" class="research-link">Leer reporte →</a>
+        </div>
+        <div class="research-card fade-in fade-in-delay-1">
+          <div class="research-icon">🌎</div>
+          <div class="research-title">LatAm Venture Landscape</div>
+          <p class="research-desc">$4.1B en 681 deals. México liderando con 25.5% del capital regional. El ecosistema en números.</p>
+          <span class="research-no-link">Reporte interno — próximamente público</span>
+        </div>
+        <div class="research-card fade-in fade-in-delay-2">
+          <div class="research-icon">⚙️</div>
+          <div class="research-title">The ANVB Framework</div>
+          <p class="research-desc">El primer framework de venture building diseñado para la era de los agentes. Agentic Native Venture Building.</p>
+          <a href="https://gamma.app/docs/jbcl3zox6v5nn73" target="_blank" rel="noopener" class="research-link">Ver framework →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       CTA FINAL
-  ========================================== -->
-  <section id="contacto">
+  <!-- ─── CONTACTO ─── -->
+  <section id="contacto" class="section">
     <div class="container">
-      <div class="cta-wrapper">
-        <h2 class="cta-headline fade-in">¿Tienes un problema que resolver?</h2>
-        <p class="cta-sub fade-in">Si tienes Founder-Market Fit genuino y una visión, hablemos.</p>
-        <div class="cta-buttons fade-in">
-          <a href="mailto:fran@zxy.vc" class="btn btn-primary">Quiero co-construir con ZXY</a>
-          <a href="mailto:fran@zxy.vc?subject=Investor" class="btn btn-outline">Soy inversionista</a>
+      <div class="contacto-inner">
+        <div class="section-label fade-in">Construyamos algo imposible</div>
+        <h2 class="section-title fade-in fade-in-delay-1">¿Tienes un problema que solo los agentes pueden resolver?</h2>
+        <p class="section-sub fade-in fade-in-delay-2">Si eres un founder con genuine market fit en un problema grande — hablemos.</p>
+        <div class="contact-form fade-in fade-in-delay-3">
+          <form action="mailto:fran@zxy.vc" method="post" enctype="text/plain">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="problema">¿Cuál es el problema?</label>
+              <textarea id="problema" name="problema" class="form-textarea" placeholder="Describe el problema que estás atacando y por qué nadie más lo ha resuelto bien…" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar → fran@zxy.vc</button>
+          </form>
+        </div>
+        <div class="contact-alt">
+          O escríbenos directo: <a href="mailto:fran@zxy.vc">fran@zxy.vc</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       FOOTER
-  ========================================== -->
+  <!-- ─── FOOTER ─── -->
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">ZXY</span>
-        <ul class="footer-links">
-          <li><a href="https://www.linkedin.com/company/zxy-ventures" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://twitter.com/zxyventures" target="_blank" rel="noopener">Twitter</a></li>
-          <li><a href="https://github.com/franduranv" target="_blank" rel="noopener">GitHub</a></li>
-        </ul>
-        <div class="footer-right">
-          <p class="footer-copy">© 2026 ZXY Ventures SAPI de CV · León, Guanajuato, México · zxy.vc</p>
-          <p class="footer-tagline">Zone of eXponential Yields</p>
+        <div class="footer-brand">
+          <span class="nav-logo"><span>ZXY</span> Ventures</span>
+          <p class="footer-tagline">
+            <strong>Zone of eXponential Yields</strong><br>
+            It's not Venture Capital. It's Venture Craft.<br><br>
+            Agentic Venture Studio · León, Guanajuato, México
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#ventures">Ventures</a></li>
+            <li><a href="#agente">Agent OS</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 <span>ZXY Ventures SAPI de CV</span> · León, Guanajuato, México
+        </div>
+        <div class="footer-copy">
+          <a href="https://zxy.vc" style="color: var(--muted); margin-right: 20px;">zxy.vc</a>
+          <a href="mailto:fran@zxy.vc" style="color: var(--muted); margin-right: 20px;">fran@zxy.vc</a>
+          <span>@zxyventures</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==========================================
-       JAVASCRIPT
-  ========================================== -->
   <script>
-    // Hamburger menu
+    // ─── MOBILE MENU ───
     const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-
+    const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
+      mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.mobile-link, .mobile-menu .nav-cta').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
 
-    // Close mobile menu on link click
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-      });
-    });
-
-    // Intersection Observer for fade-in
+    // ─── INTERSECTION OBSERVER (fade-in) ───
+    const fadeEls = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1288,12 +1275,34 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    fadeEls.forEach(el => observer.observe(el));
 
-    // Stagger children fade-in within grids
-    document.querySelectorAll('.studio-grid, .projects-grid, .agents-grid, .research-grid').forEach(grid => {
-      grid.querySelectorAll('.fade-in').forEach((child, i) => {
-        child.style.transitionDelay = `${i * 0.08}s`;
+    // ─── NAV ACTIVE STATE ───
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + current) {
+          link.style.color = 'var(--text)';
+        }
+      });
+    });
+
+    // ─── SMOOTH SCROLL POLYFILL ───
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
     });
   </script>
