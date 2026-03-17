@@ -190,6 +190,13 @@ nav {
   gap: 5px;
   cursor: pointer;
   padding: 4px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.nav-hamburger:focus-visible {
+  outline: 2px solid var(--accent);
+  border-radius: 4px;
 }
 .nav-hamburger span {
   display: block;
@@ -752,6 +759,21 @@ footer {
 @media (max-width: 640px) {
   .footer-inner { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-eyebrow::before {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* ── SCROLLBAR ── */
