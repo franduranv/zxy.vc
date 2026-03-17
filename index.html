@@ -193,8 +193,22 @@
       padding-top: 68px;
       position: relative;
       overflow: hidden;
+      background: url('assets/Pictures/milad-fakurian-jBif-dovsTQ-unsplash_edited.jpg') center center / cover no-repeat;
     }
     #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(8,8,15,0.88) 0%,
+        rgba(8,8,15,0.72) 50%,
+        rgba(8,8,15,0.85) 100%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+    #hero::after {
       content: '';
       position: absolute;
       top: -200px; left: 50%;
@@ -202,6 +216,7 @@
       width: 900px; height: 900px;
       background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 65%);
       pointer-events: none;
+      z-index: 0;
     }
     .hero-inner {
       position: relative;
@@ -484,6 +499,8 @@
       margin-bottom: 64px;
     }
     .agent-card {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       background: var(--bg3);
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -495,11 +512,11 @@
       transform: translateY(-3px);
     }
     .agent-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -508,6 +525,14 @@
       font-weight: 600;
       color: #FFFFFF;
       margin-bottom: 16px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .agent-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .agent-name {
       font-family: var(--font-h);
@@ -1005,7 +1030,29 @@
     .form-disclaimer { text-align: center; color: var(--muted); font-size: .8rem; margin-top: 12px; }
     #founder-fields { transition: opacity .3s; }
 
-    </style>
+  
+    /* ─── SECTION SEPARATORS ─── */
+    .section-separator {
+      height: 320px;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-separator::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(8,8,15,1) 0%,
+        rgba(8,8,15,0.3) 40%,
+        rgba(8,8,15,0.3) 60%,
+        rgba(8,8,15,1) 100%
+      );
+    }
+  </style>
 </head>
 <body>
 
@@ -1206,6 +1253,9 @@
     </div>
   </section>
 
+  <!-- ─── SEPARATOR ─── -->
+  <div class="section-separator" style="background-image:url('assets/Pictures/milad-fakurian-SwEugqgu3xI-unsplash.jpg')"></div>
+
   <!-- ─── AGENT OS ─── -->
   <section id="agente" class="section">
     <div class="container">
@@ -1219,43 +1269,43 @@
       </div>
       <div class="agente-grid">
         <div class="agent-card fade-in">
-          <div class="agent-avatar">H</div>
+          <div class="agent-avatar"><img src="assets/agents/hugo.png" alt="Hugo" loading="lazy"></div>
           <div class="agent-name">Hugo</div>
           <div class="agent-role">Chief of Staff</div>
           <div class="agent-spec">Coordination &amp; Ops</div>
         </div>
         <div class="agent-card fade-in fade-in-delay-1">
-          <div class="agent-avatar">R</div>
+          <div class="agent-avatar"><img src="assets/agents/rafa.png" alt="Rafa" loading="lazy"></div>
           <div class="agent-name">Rafa</div>
           <div class="agent-role">Research</div>
           <div class="agent-spec">Market Intelligence</div>
         </div>
         <div class="agent-card fade-in fade-in-delay-2">
-          <div class="agent-avatar">A</div>
+          <div class="agent-avatar"><img src="assets/agents/andres.png" alt="Andrés" loading="lazy"></div>
           <div class="agent-name">Andrés</div>
           <div class="agent-role">Build</div>
           <div class="agent-spec">Code &amp; Tech</div>
         </div>
         <div class="agent-card fade-in fade-in-delay-3">
-          <div class="agent-avatar">L</div>
+          <div class="agent-avatar"><img src="assets/agents/luis.png" alt="Luis" loading="lazy"></div>
           <div class="agent-name">Luis</div>
           <div class="agent-role">Growth</div>
           <div class="agent-spec">Content &amp; Channels</div>
         </div>
         <div class="agent-card fade-in">
-          <div class="agent-avatar">M</div>
+          <div class="agent-avatar"><img src="assets/agents/maribel.png" alt="Maribel" loading="lazy"></div>
           <div class="agent-name">Maribel</div>
           <div class="agent-role">Legal</div>
           <div class="agent-spec">Contracts &amp; Compliance</div>
         </div>
         <div class="agent-card fade-in fade-in-delay-1">
-          <div class="agent-avatar">B</div>
+          <div class="agent-avatar"><img src="assets/agents/beto.png" alt="Beto" loading="lazy"></div>
           <div class="agent-name">Beto</div>
           <div class="agent-role">Finance</div>
           <div class="agent-spec">Unit Economics</div>
         </div>
         <div class="agent-card fade-in fade-in-delay-2">
-          <div class="agent-avatar">E</div>
+          <div class="agent-avatar"><img src="assets/agents/emily.png" alt="Emily" loading="lazy"></div>
           <div class="agent-name">Emily</div>
           <div class="agent-role">Comms</div>
           <div class="agent-spec">Stakeholder Relations</div>
@@ -1267,6 +1317,9 @@
     </div>
   </section>
 
+  <!-- ─── SEPARATOR ─── -->
+  <div class="section-separator" style="background-image:url('assets/Pictures/david-east-6psstU2DLKs-unsplash.jpg')"></div>
+
   <!-- ─── EQUIPO ─── -->
   <section id="equipo" class="section">
     <div class="container">
@@ -1277,7 +1330,7 @@
       <div class="equipo-grid">
         <div class="equipo-card fade-in">
           <div class="equipo-card-top">
-            <div class="equipo-avatar">FD</div>
+            <div class="equipo-avatar" style="overflow:hidden;border-radius:50%;padding:0;"><img src="assets/agents/fran.jpg" alt="Fran Durán" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" loading="lazy"></div>
             <div>
               <div class="equipo-name">Fran Durán</div>
               <div class="equipo-role">Founder &amp; CEO</div>
