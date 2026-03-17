@@ -848,7 +848,52 @@
 
     /* ─── SELECTION ─── */
     ::selection { background: rgba(108,99,255,0.3); color: var(--text); }
-  </style>
+  
+    /* ─── HOW IT WORKS ─── */
+    .process-steps { display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap; }
+    .process-step { flex: 1; min-width: 220px; background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; }
+    .step-number { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--purple); opacity: .5; margin-bottom: 12px; line-height: 1; }
+    .step-content h3 { font-family: 'Oswald', sans-serif; font-size: 1.3rem; margin-bottom: 10px; }
+    .step-content p { color: var(--muted); font-size: .9rem; line-height: 1.6; }
+    .process-arrow { font-size: 1.5rem; color: var(--purple); opacity: .4; align-self: center; padding: 0 4px; }
+    @media (max-width: 768px) { .process-arrow { display: none; } }
+
+    /* ─── TWO COL CTA ─── */
+    .two-col-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    @media (max-width: 768px) { .two-col-cta { grid-template-columns: 1fr; } }
+    .cta-col { background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; padding: 36px 32px; }
+    .cta-col h2 { font-size: 1.6rem; margin: 16px 0 16px; line-height: 1.25; }
+    .cta-col p { color: var(--muted); font-size: .95rem; margin-bottom: 20px; line-height: 1.65; }
+    .cta-list { list-style: none; margin: 0 0 24px; padding: 0; }
+    .cta-list li { color: var(--muted); font-size: .9rem; padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .cta-list li:last-child { border-bottom: none; }
+    .badge-blue { background: #3B82F6; }
+    .badge-purple { background: var(--purple); }
+    .vclab-badge { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 20px; font-size: .85rem; color: var(--muted); }
+    .vclab-badge strong { color: var(--text); }
+
+    /* ─── APPLY FORM ─── */
+    .apply-form { max-width: 680px; margin: 0 auto; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: .85rem; font-weight: 600; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
+      padding: 12px 16px; color: var(--text); font-family: 'Raleway', sans-serif; font-size: .95rem;
+      transition: border .2s;
+    }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--purple); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .radio-group { display: flex; flex-direction: column; gap: 10px; }
+    .radio-option { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; font-size: .9rem; }
+    .radio-option input { accent-color: var(--purple); width: 16px; height: 16px; }
+    .radio-option:hover { border-color: var(--purple); }
+    .btn-full { width: 100%; text-align: center; justify-content: center; }
+    .form-disclaimer { text-align: center; color: var(--muted); font-size: .8rem; margin-top: 12px; }
+    #founder-fields { transition: opacity .3s; }
+
+    </style>
 </head>
 <body>
 
@@ -1185,7 +1230,91 @@
   </section>
 
   <!-- ─── CONTACTO ─── -->
-  <section id="contacto" class="section">
+  
+  <!-- HOW IT WORKS -->
+  <section id="proceso" style="padding:80px 0;border-top:1px solid #2A2A4A;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
+      <div style="text-align:center;margin-bottom:56px;">
+        <span style="background:#6C63FF;color:#fff;padding:4px 14px;border-radius:4px;font-family:Oswald;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;">El proceso</span>
+        <h2 style="font-family:Oswald;font-size:2.2rem;margin:16px 0 12px;color:#E2E2F0;">Cómo construimos</h2>
+        <p style="color:#8888AA;max-width:560px;margin:0 auto;">No trabajamos con decks. Trabajamos con problemas reales y founders que los han vivido.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+        <div style="background:#12122A;border:1px solid #2A2A4A;border-radius:12px;padding:32px;position:relative;">
+          <div style="font-family:Oswald;font-size:3rem;color:#6C63FF;opacity:.3;position:absolute;top:16px;right:20px;line-height:1;">01</div>
+          <h3 style="font-family:Oswald;font-size:1.3rem;color:#E2E2F0;margin-bottom:12px;">Identify</h3>
+          <p style="color:#8888AA;font-size:.95rem;line-height:1.7;">Encontramos el problema correcto con el founder correcto. Sin Founder-Market Fit genuino, no avanzamos. El mercado no se puede fingir.</p>
+        </div>
+        <div style="background:#12122A;border:1px solid #2A2A4A;border-radius:12px;padding:32px;position:relative;">
+          <div style="font-family:Oswald;font-size:3rem;color:#6C63FF;opacity:.3;position:absolute;top:16px;right:20px;line-height:1;">02</div>
+          <h3 style="font-family:Oswald;font-size:1.3rem;color:#E2E2F0;margin-bottom:12px;">Build</h3>
+          <p style="color:#8888AA;font-size:.95rem;line-height:1.7;">Agent OS construye el venture en semanas, no meses. El founder dirige. Los agentes ejecutan. De idea a producto funcional en menos de 30 días.</p>
+        </div>
+        <div style="background:#12122A;border:1px solid #2A2A4A;border-radius:12px;padding:32px;position:relative;">
+          <div style="font-family:Oswald;font-size:3rem;color:#6C63FF;opacity:.3;position:absolute;top:16px;right:20px;line-height:1;">03</div>
+          <h3 style="font-family:Oswald;font-size:1.3rem;color:#E2E2F0;margin-bottom:12px;">Scale</h3>
+          <p style="color:#8888AA;font-size:.95rem;line-height:1.7;">De revenue signal a mercado en menos de 90 días. Solo escalamos lo que funciona. La evidencia manda, no las proyecciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDERS -->
+  <section id="founders" style="padding:80px 0;border-top:1px solid #2A2A4A;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;">
+        
+        <!-- Founders card -->
+        <div style="background:#12122A;border:1px solid #6C63FF;border-radius:16px;padding:40px;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+            <div style="width:48px;height:48px;background:#6C63FF22;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">🚀</div>
+            <div>
+              <div style="font-family:Oswald;font-size:1.4rem;color:#E2E2F0;">Soy Founder</div>
+              <div style="color:#8888AA;font-size:.85rem;">Tengo el problema. Busco el equipo.</div>
+            </div>
+          </div>
+          <p style="color:#8888AA;font-size:.9rem;line-height:1.7;margin-bottom:24px;">Si has vivido de primera mano el problema que quieres resolver — y tienes la obsesión para cambiarlo — ZXY puede ser tu co-fundador institucional. Nosotros ponemos el Agent OS; tú pones el Founder-Market Fit.</p>
+          <div style="margin-bottom:24px;">
+            <div style="color:#E2E2F0;font-size:.85rem;font-weight:600;margin-bottom:12px;">Lo que evaluamos:</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> ¿Cuál es tu historia con el problema?</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> ¿Tienes acceso directo al mercado?</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> ¿Puedes dedicar tiempo full-time?</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> ¿El problema es real y urgente hoy?</div>
+            </div>
+          </div>
+          <a href="https://tally.so/r/zxy-founder" target="_blank" style="display:block;background:#6C63FF;color:#fff;padding:14px 24px;border-radius:8px;text-align:center;font-family:Oswald;font-size:1rem;letter-spacing:.5px;text-decoration:none;transition:background .2s;">Aplicar como Founder →</a>
+          <p style="color:#8888AA;font-size:.75rem;text-align:center;margin-top:12px;">Revisamos cada aplicación en &lt;5 días hábiles</p>
+        </div>
+
+        <!-- Investors card -->
+        <div style="background:#12122A;border:1px solid #2A2A4A;border-radius:16px;padding:40px;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+            <div style="width:48px;height:48px;background:#6C63FF22;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">📊</div>
+            <div>
+              <div style="font-family:Oswald;font-size:1.4rem;color:#E2E2F0;">Soy Inversionista</div>
+              <div style="color:#8888AA;font-size:.85rem;">Quiero acceso al deal flow de ZXY.</div>
+            </div>
+          </div>
+          <p style="color:#8888AA;font-size:.9rem;line-height:1.7;margin-bottom:24px;">ZXY construye ventures con unit economics sólidos desde día uno. Buscamos inversionistas que aporten más que capital — conocimiento sectorial, red de distribución y visión de largo plazo.</p>
+          <div style="margin-bottom:24px;">
+            <div style="color:#E2E2F0;font-size:.85rem;font-weight:600;margin-bottom:12px;">ZXY Capital está respaldado por:</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> VC Lab — Venture Capital Accelerator</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> 37 inversiones • 3x MOIC histórico</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> +5,000 contactos en el ecosistema</div>
+              <div style="display:flex;align-items:center;gap:8px;color:#8888AA;font-size:.85rem;"><span style="color:#6C63FF;">→</span> Co-inversiones con Ángeles Inversionistas MX</div>
+            </div>
+          </div>
+          <a href="https://decilehub.com" target="_blank" style="display:block;background:transparent;color:#6C63FF;border:1px solid #6C63FF;padding:14px 24px;border-radius:8px;text-align:center;font-family:Oswald;font-size:1rem;letter-spacing:.5px;text-decoration:none;margin-bottom:12px;">Ver Deal Flow en DecileHub →</a>
+          <a href="mailto:fran@zxy.vc?subject=Interés como inversionista ZXY" style="display:block;color:#8888AA;padding:10px 24px;border-radius:8px;text-align:center;font-size:.85rem;text-decoration:none;">O escríbenos: fran@zxy.vc</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<section id="contacto" class="section">
     <div class="container">
       <div class="contacto-inner">
         <div class="section-label fade-in">Construyamos algo imposible</div>
@@ -1218,7 +1347,149 @@
   </section>
 
   <!-- ─── FOOTER ─── -->
-  <footer>
+  
+    <!-- ═══════════════════════════════════════════════════ HOW IT WORKS -->
+    <section id="como-funciona" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">El Proceso</span>
+          <h2>De problema a venture en <span class="accent">30 días</span></h2>
+          <p class="section-sub">No contratamos equipos. No esperamos rondas. Ejecutamos desde el día cero.</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Identify</h3>
+              <p>Encontramos el problema correcto — con el founder correcto. El Founder-Market Fit no es negociable. Sin él, el mejor agente del mundo no alcanza.</p>
+            </div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Build</h3>
+              <p>Agent OS construye el venture. Research, código, legal, finanzas y growth — todo en paralelo. Lo que toma 12 meses con un equipo humano, toma 4 semanas con Agent OS.</p>
+            </div>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Scale</h3>
+              <p>De revenue signal a mercado en menos de 90 días. Solo escalamos lo que funciona. Kill fast, build what works.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ FOUNDERS -->
+    <section id="founders" class="section section-dark">
+      <div class="container">
+        <div class="two-col-cta">
+          <div class="cta-col cta-founder">
+            <span class="badge badge-blue">Para Founders</span>
+            <h2>Tienes el problema.<br>Nosotros tenemos el equipo.</h2>
+            <p>Si tienes genuine Founder-Market Fit — viviste el problema, conoces el mercado, tienes las relaciones — ZXY puede ser tu co-fundador institucional. Agent OS construye. Tú lideras.</p>
+            <ul class="cta-list">
+              <li>✦ Agent OS desde el día cero (sin hiring)</li>
+              <li>✦ Proceso probado: de idea a revenue en 30 días</li>
+              <li>✦ ZXY como co-fundador institucional (15-30% equity)</li>
+              <li>✦ Solo trabajamos con 3 ventures activos simultáneos</li>
+            </ul>
+            <a href="#aplicar" class="btn btn-primary" onclick="document.getElementById('form-tipo').value='founder'; document.getElementById('aplicar').scrollIntoView({behavior:'smooth'}); return false;">Aplicar como Founder →</a>
+          </div>
+          <div class="cta-col cta-investor">
+            <span class="badge badge-purple">Para Inversionistas</span>
+            <h2>Deal flow de calidad.<br>Validado antes de llegar.</h2>
+            <p>Cada venture en el portfolio de ZXY pasó por un proceso riguroso de validación. No son ideas — son negocios con revenue signal, equipo operando y modelo probado.</p>
+            <ul class="cta-list">
+              <li>✦ Ventures con revenue antes de fundraising</li>
+              <li>✦ Agent OS como ventaja estructural permanente</li>
+              <li>✦ Acceso a deal flow filtrado por ZXY</li>
+              <li>✦ Alumni de VC Lab — estructura de fondo seria</li>
+            </ul>
+            <div class="vclab-badge">
+              <span class="vclab-text">Alumni · </span>
+              <strong>VC Lab</strong>
+              <span class="vclab-sub"> — The Venture Capital Accelerator</span>
+            </div>
+            <a href="#aplicar" class="btn btn-outline" onclick="document.getElementById('form-tipo').value='inversor'; document.getElementById('aplicar').scrollIntoView({behavior:'smooth'}); return false;">Solicitar acceso al deal flow →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ APLICAR -->
+    <section id="aplicar" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Aplica</span>
+          <h2>¿Listo para construir algo <span class="accent">imposible</span>?</h2>
+          <p class="section-sub">Cuéntanos quién eres y qué problema quieres resolver. Respondemos en 48 horas.</p>
+        </div>
+        <form class="apply-form" action="mailto:ventures@zxy.vc" method="post" enctype="text/plain" onsubmit="return handleApply(event)">
+          <input type="hidden" id="form-tipo" name="tipo" value="founder">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre completo *</label>
+              <input type="text" name="nombre" placeholder="Fran Durán" required>
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" name="email" placeholder="tú@empresa.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>¿Eres founder o inversionista? *</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="rol" value="founder" checked onchange="document.getElementById('form-tipo').value='founder'">
+                <span>Founder — quiero co-construir un venture con ZXY</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="rol" value="inversor" onchange="document.getElementById('form-tipo').value='inversor'">
+                <span>Inversionista — quiero acceso al deal flow de ZXY</span>
+              </label>
+            </div>
+          </div>
+
+          <div id="founder-fields">
+            <div class="form-group">
+              <label>¿Cuál es el problema que quieres resolver? *</label>
+              <textarea name="problema" rows="3" placeholder="Describe el problema en 2-3 líneas. ¿Por qué tú? ¿Lo has vivido en primera persona?"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>¿En qué industria o mercado?</label>
+                <input type="text" name="industria" placeholder="PropTech, FinTech, EdTech...">
+              </div>
+              <div class="form-group">
+                <label>¿Tienes tracción o usuarios ya?</label>
+                <input type="text" name="traccion" placeholder="Ej: 50 early users, $2K MRR, lista de espera...">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Tu experiencia relevante en este mercado</label>
+              <textarea name="experiencia" rows="2" placeholder="¿Por qué tú eres la persona correcta para resolver este problema?"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>LinkedIn o website</label>
+            <input type="url" name="linkedin" placeholder="https://linkedin.com/in/tu-perfil">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Enviar aplicación →</button>
+          <p class="form-disclaimer">Respondemos en 48 horas. Toda la información es confidencial.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
@@ -1306,5 +1577,27 @@
       });
     });
   </script>
+
+<script>
+function handleApply(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form));
+  const subject = data.rol === 'inversor' ? 'Deal Flow Request — ZXY Ventures' : 'Founder Application — ZXY Ventures';
+  const body = Object.entries(data).map(([k,v]) => k+': '+v).join('\n');
+  window.location.href = 'mailto:ventures@zxy.vc?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  // Show success message
+  form.innerHTML = '<div style="text-align:center;padding:40px"><div style="font-size:2rem;margin-bottom:16px">✦</div><h3 style="font-family:Oswald;font-size:1.5rem;margin-bottom:8px">Aplicación enviada</h3><p style="color:var(--muted)">Abrimos tu cliente de email. Respondemos en 48 horas.</p></div>';
+  return false;
+}
+// Show/hide founder fields based on radio
+document.addEventListener('change', function(e) {
+  if (e.target.name === 'rol') {
+    const ff = document.getElementById('founder-fields');
+    if (ff) ff.style.opacity = e.target.value === 'inversor' ? '0.4' : '1';
+  }
+});
+</script>
+
 </body>
 </html>
