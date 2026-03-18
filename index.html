@@ -37,6 +37,15 @@
   <link rel="preload" as="image" href="assets/Pictures/giorgio-parravicini-12IHVEFRacQ-unsplash.jpg" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Anti-flash: aplica tema antes del primer render -->
+  <script>
+    (function() {
+      var stored = localStorage.getItem('zxy-theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -51,6 +60,7 @@
         <li><a href="#research">Research</a></li>
         <li><a href="#contacto" class="nav-cta">Trabaja con nosotros</a></li>
       </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"></button>
       <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -474,5 +484,6 @@
       });
     });
   </script>
+  <script src="landing.js"></script>
 </body>
 </html>
