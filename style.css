@@ -840,3 +840,61 @@ footer {
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn-primary, .hero-ctas .btn-secondary { text-align: center; justify-content: center; }
 }
+
+/* ── PIPELINE ── */
+.pipeline-stages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.pipeline-stage {
+  flex: 1;
+  min-width: 120px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px 16px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.pipeline-stage-active {
+  border-color: var(--border2);
+  background: rgba(var(--accent-rgb), 0.04);
+}
+.pipeline-stage-label {
+  font-family: var(--font-h);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.pipeline-stage-sub {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pipeline-arrow {
+  font-size: 18px;
+  color: var(--border2);
+  flex-shrink: 0;
+}
+.pipeline-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.pipeline-cta p {
+  font-size: 15px;
+  color: var(--muted);
+}
+@media (max-width: 640px) {
+  .pipeline-arrow { display: none; }
+  .pipeline-stage { min-width: 100px; }
+}
