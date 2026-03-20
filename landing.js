@@ -40,4 +40,4 @@
       applyTheme(e.matches ? 'dark' : 'light');
     }
   });
-})();
+})
