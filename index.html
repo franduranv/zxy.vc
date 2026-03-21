@@ -45,31 +45,33 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="style.css?v=42h" />
-  <!-- Critical mobile CSS — inline to bypass any CDN/browser cache -->
+  <link rel="stylesheet" href="style.css?v=42i" />
+  <!-- Critical mobile CSS — inline -->
   <style>
-    @media (max-width: 900px) {
-      nav ul.nav-links { display: none !important; }
-      .nav-hamburger { display: flex !important; }
-      .lang-toggle { display: none !important; }
-      #theme-toggle { display: none !important; }
-    }
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 6px;
-      background: none;
-      border: 1px solid rgba(128,128,128,0.3);
-      border-radius: 4px;
-      outline: none;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px; height: 2px;
-      background: currentColor;
-      border-radius: 2px;
+    /* Desktop: show links, hide hamburger */
+    button#hamburger { display: none; }
+    /* Mobile: hide links, show hamburger */
+    @media screen and (max-width: 900px) {
+      nav > div > ul { display: none !important; }
+      nav > div > .lang-toggle { display: none !important; }
+      nav > div > #theme-toggle { display: none !important; }
+      button#hamburger { 
+        display: flex !important; 
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 6px;
+        background: none;
+        border: 1px solid rgba(128,128,128,0.4);
+        border-radius: 4px;
+        outline: none;
+      }
+      button#hamburger span {
+        display: block;
+        width: 22px; height: 2px;
+        background: currentColor;
+        border-radius: 2px;
+      }
     }
   </style>
 </head>
@@ -497,6 +499,6 @@
   </script>
 
 
-  <script src="landing.js?v=42h"></script>
+  <script src="landing.js?v=42i"></script>
 </body>
 </html>
