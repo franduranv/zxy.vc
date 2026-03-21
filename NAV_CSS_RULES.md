@@ -1,32 +1,37 @@
-# ⚠️ REGLAS CRÍTICAS — NAV CSS
+# ⚠️ REGLAS CRÍTICAS — NAV & FOOTER
 
 ## Causa raíz del bug (21-Mar-2026)
 
-El nav SIEMPRE estuvo en su lugar. El problema era **invisibilidad por color**, no layout.
+El footer original usaba `class="nav-logo"` en su logo — **misma clase que el nav**.
+Al modificar el CSS del footer, se rompía el nav también.
 
-### Bug: `color: var(--muted)` en `.nav-links a`
-En dark mode `--muted: #555555` sobre fondo `rgba(0,0,0,0.85)` = texto invisible.
+### Síntoma observado:
+- Nav links invisibles (color `var(--muted)` = `#555` sobre fondo negro)
+- Nav logo colapsado a 0px (CSS del footer sobreescribía `.nav-logo`)
 
-### Fix aplicado en `clean2`:
-```css
-.nav-links a { color: rgba(255,255,255,0.8); }
+## Regla fundamental
+
+### ✅ FOOTER usa prefijo `ft-` — siempre
+```html
+<!-- ✅ Correcto -->
+<div class="ft-inner">
+  <img class="ft-logo-img" ...>
+  <a class="ft-link" ...>
+
+<!-- ❌ NUNCA en el footer -->
+<span class="nav-logo">  <!-- rompe el nav -->
+<a class="nav-links">    <!-- rompe el nav -->
 ```
 
-## Reglas que NO se deben tocar
+## CSS del nav — NO modificar
 
 ```css
-/* NAV — NO MODIFICAR */
-nav { position: fixed; top: 0; z-index: 100; background: var(--nav-bg); height: 68px; }
-.nav-inner { display: flex; justify-content: space-between; }
-.nav-links { flex: 1; justify-content: center; }
-.nav-links a { color: rgba(255,255,255,0.8); } /* CRÍTICO — no volver a var(--muted) */
+.nav-links a { color: rgba(255,255,255,0.8); } /* NO cambiar a var(--muted) */
+.nav-logo { display: inline-flex; flex-shrink: 0; }
+.nav-logo img { width: 136px; height: 26px; }
 ```
 
-## Footer: usar prefijo `ft-` siempre
+## Lección
 
-Para evitar colisión con nav, el footer usa clases con prefijo `ft-`:
-- `ft-inner`, `ft-brand`, `ft-nav`, `ft-link`, `ft-logo-img`, `ft-copy`
-
-## Lección aprendida
-
-**backdrop-filter** en Safari causa transparencia. Se quitó del nav pero sigue en el CSS base. Si se agrega de vuelta al nav, el fondo puede desaparecer en Safari iOS.
+**Nunca compartir clases entre nav y footer.**
+El prefijo `ft-` garantiza aislamiento total.
