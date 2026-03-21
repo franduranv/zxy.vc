@@ -45,7 +45,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="style.css?v=42l" />
+  <link rel="stylesheet" href="style.css?v=42m" />
   <!-- Critical mobile CSS — inline -->
   <style>
     /* Desktop: show links, hide hamburger */
@@ -90,11 +90,13 @@
         <li><a href="#research">Research</a></li>
         <li><a href="#contacto" class="nav-cta"><span data-es="Trabaja con nosotros" data-en="Work with us">Trabaja con nosotros</span></a></li>
       </ul>
-      <button class="lang-toggle" aria-label="Cambiar idioma">ES</button>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"></button>
-      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-controls-group">
+        <button class="lang-toggle" aria-label="Cambiar idioma">ES</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"></button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -504,8 +506,8 @@
     (function() {
       var hamburger = document.getElementById('hamburger');
       var links = document.querySelector('nav ul');
-      var langBtn = document.querySelector('nav .lang-toggle');
-      var themeBtn = document.querySelector('nav #theme-toggle');
+      var langBtn = document.querySelector('.nav-controls-group .lang-toggle');
+      var themeBtn = document.querySelector('.nav-controls-group #theme-toggle');
 
       function applyMobileNav() {
         var isMobile = window.innerWidth <= 900;
@@ -521,6 +523,6 @@
       window.addEventListener('resize', applyMobileNav);
     })();
   </script>
-  <script src="landing.js?v=42l"></script>
+  <script src="landing.js?v=42m"></script>
 </body>
 </html>

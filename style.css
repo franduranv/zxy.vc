@@ -157,15 +157,15 @@ nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background-color: #000000;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #1a1a1a;
   height: 68px;
   display: flex;
   align-items: center;
 }
 [data-theme="light"] nav {
   background-color: #ffffff;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid #e5e5e5;
   box-shadow: 0 1px 6px rgba(0,0,0,0.08);
 }
 .nav-inner {
@@ -176,31 +176,41 @@ nav {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 24px;
+  gap: 0;
 }
 .nav-logo {
-  font-family: var(--font-h);
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: 1px;
-  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
 }
-.nav-logo span { color: var(--accent); }
+.nav-logo-img { display: block; width: 136px; height: 26px; }
+[data-theme="light"] .nav-logo-img { filter: invert(1); }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .nav-logo-img { filter: invert(1); }
+}
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
   list-style: none;
 }
 .nav-links a {
   font-family: var(--font-b);
   font-weight: 500;
   font-size: 14px;
-  color: var(--muted);
+  color: var(--text2);
   transition: color 0.2s;
+  text-decoration: none;
 }
 .nav-links a:hover { color: var(--text); }
-/* Push lang + theme toggles to the right edge */
-.nav-links ~ .lang-toggle { margin-left: auto; }
+/* Nav controls group */
+.nav-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
 .nav-cta {
   background: var(--accent) !important;
   color: var(--bg) !important;
@@ -211,25 +221,7 @@ nav {
   transition: background 0.2s, transform 0.15s !important;
 }
 .nav-cta:hover { background: var(--accent-hover) !important; transform: translateY(-1px); }
-.theme-toggle {
-  background: none;
-  border: none;
-  color: var(--text2);
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: color 0.2s;
-}
-.theme-toggle:hover { color: var(--text); }
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
+
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -914,26 +906,7 @@ footer {
 }
 
 /* ── Lang toggle ── */
-.lang-toggle {
-  background: none;
-  border: none;
-  color: var(--text2);
-  font-family: var(--font-b);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .1em;
-  padding: 0 6px;
-  height: 36px;
-  cursor: pointer;
-  transition: color .2s;
-  flex-shrink: 0;
-}
-.lang-toggle:hover { color: var(--text); }
-.lang-toggle:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
+
 
 /* ── FOOTER (added) ── */
 footer {
@@ -991,3 +964,48 @@ footer {
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) .nav-logo-img { filter: invert(1); }
 }
+
+/* Nav controls group */
+.nav-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.lang-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--text);
+  font-family: var(--font-b);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 0 10px;
+  height: 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+[data-theme="light"] .lang-toggle {
+  border-color: rgba(0,0,0,0.2);
+}
+.lang-toggle:hover { border-color: var(--accent); }
+.theme-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--text);
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+[data-theme="light"] .theme-toggle {
+  border-color: rgba(0,0,0,0.2);
+}
+.theme-toggle:hover { border-color: var(--accent); }
