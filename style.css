@@ -168,6 +168,7 @@ nav {
 .nav-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
   width: 100%;
   max-width: 1160px;
@@ -179,7 +180,7 @@ nav {
   align-items: center;
   flex-shrink: 0;
 }
-.nav-logo img { height: 26px; width: auto; display: block; }
+.nav-logo img { height: 26px; width: 136px; display: block; }
 .logo-light { display: none; }
 [data-theme="light"] .logo-dark  { display: none; }
 [data-theme="light"] .logo-light { display: block; }
