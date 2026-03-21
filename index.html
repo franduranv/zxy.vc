@@ -45,7 +45,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="style.css?v=42k" />
+  <link rel="stylesheet" href="style.css?v=42l" />
   <!-- Critical mobile CSS — inline -->
   <style>
     /* Desktop: show links, hide hamburger */
@@ -499,6 +499,28 @@
   </script>
 
 
-  <script src="landing.js?v=42k"></script>
+  <!-- Mobile nav JS — direct style manipulation, bypasses all CSS conflicts -->
+  <script>
+    (function() {
+      var hamburger = document.getElementById('hamburger');
+      var links = document.querySelector('nav ul');
+      var langBtn = document.querySelector('nav .lang-toggle');
+      var themeBtn = document.querySelector('nav #theme-toggle');
+
+      function applyMobileNav() {
+        var isMobile = window.innerWidth <= 900;
+        if (hamburger) hamburger.style.display = isMobile ? 'flex' : 'none';
+        if (links) links.style.display = isMobile ? 'none' : 'flex';
+        if (langBtn) langBtn.style.display = isMobile ? 'none' : '';
+        if (themeBtn) themeBtn.style.display = isMobile ? 'none' : '';
+      }
+
+      // Run immediately
+      applyMobileNav();
+      // Run on resize
+      window.addEventListener('resize', applyMobileNav);
+    })();
+  </script>
+  <script src="landing.js?v=42l"></script>
 </body>
 </html>
