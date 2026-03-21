@@ -160,7 +160,8 @@ nav {
   background: var(--nav-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08);
   height: 68px;
   display: flex;
   align-items: center;
@@ -188,6 +189,33 @@ nav {
   color: var(--text);
 }
 .nav-logo span { color: var(--accent); }
+/* Lang/theme button visibility in dark nav */
+.lang-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-b);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+[data-theme="light"] .lang-toggle { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.7); }
+.lang-toggle:hover { border-color: #fff; color: #fff; }
+.theme-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.8);
+  width: 30px; height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+[data-theme="light"] .theme-toggle { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.7); }
+.theme-toggle:hover { border-color: #fff; color: #fff; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -198,10 +226,10 @@ nav {
   font-family: var(--font-b);
   font-weight: 500;
   font-size: 14px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.75);
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--text); }
+.nav-links a:hover { color: #ffffff; }
 /* Push lang + theme toggles to the right edge */
 .nav-links ~ .lang-toggle { margin-left: auto; }
 .nav-cta {
