@@ -36,9 +36,7 @@
   <!-- Preload hero image -->
   <link rel="preload" as="image" href="assets/Pictures/giorgio-parravicini-12IHVEFRacQ-unsplash.jpg" />
 
-  <link rel="stylesheet" href="style.css?v=42b" />
-
-  <!-- Anti-flash: aplica tema antes del primer render -->
+  <!-- Anti-flash: MUST run before CSS to prevent logo flicker -->
   <script>
     (function() {
       var stored = localStorage.getItem('zxy-theme');
@@ -46,6 +44,8 @@
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
+
+  <link rel="stylesheet" href="style.css?v=42c" />
 </head>
 <body>
 
@@ -428,23 +428,23 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <span class="nav-logo"><span>ZXY</span> Ventures</span>
-          <p class="footer-tagline">Agentic Venture Studio.<br><strong>Zone of eXponential Yields.</strong><br>México · LatAm.</p>
+          <div class="footer-logo">
+            <img src="assets/ZXY Logos/ZXY_Ventures_Logo_02_White.svg" class="logo-dark" alt="ZXY Ventures" height="20" width="104" />
+            <img src="assets/ZXY Logos/ZXY_Ventures_Logo_02_Black.svg" class="logo-light" alt="ZXY Ventures" height="20" width="104" />
+          </div>
+          <p class="footer-tagline" data-es="Agentic Venture Studio · México · LatAm" data-en="Agentic Venture Studio · Mexico · LatAm">Agentic Venture Studio · México · LatAm</p>
         </div>
-        <div class="footer-links">
-          <h4 data-es="Navegación" data-en="Navigation">Navegación</h4>
-          <ul>
-            <li><a href="#nosotros"><span data-es="Nosotros" data-en="About">Nosotros</span></a></li>
-            <li><a href="#agente">Agent OS</a></li>
-            <li><a href="#ventures">Ventures</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
-          </ul>
-        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#nosotros"><span data-es="Nosotros" data-en="About">Nosotros</span></a>
+          <a href="#agente">Agent OS</a>
+          <a href="#ventures">Ventures</a>
+          <a href="#research">Research</a>
+          <a href="#contacto"><span data-es="Trabaja con nosotros" data-en="Work with us">Trabaja con nosotros</span></a>
+        </nav>
       </div>
       <div class="footer-bottom">
-        <span class="footer-copy">© 2026 <span>ZXY Ventures</span> — It's Venture Craft.</span>
-        <span class="footer-copy">México · LatAm · <a href="mailto:hey@zxy.vc">hey@zxy.vc</a></span>
+        <span class="footer-copy">© 2026 ZXY Ventures — <em>It's Venture Craft.</em></span>
+        <span class="footer-copy"><a href="mailto:hey@zxy.vc">hey@zxy.vc</a></span>
       </div>
     </div>
   </footer>
@@ -473,6 +473,6 @@
   </script>
 
 
-  <script src="landing.js?v=42b"></script>
+  <script src="landing.js?v=42c"></script>
 </body>
 </html>
