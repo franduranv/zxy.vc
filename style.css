@@ -219,8 +219,10 @@ nav {
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 32px;
   list-style: none;
+  flex: 1;
 }
 .nav-links a {
   font-family: var(--font-b);
