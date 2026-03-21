@@ -271,9 +271,11 @@ nav {
 .mobile-menu a:last-child { border-bottom: none; }
 .mobile-menu a:hover { color: var(--text); }
 .mobile-menu .nav-cta { border-bottom: none; text-align: center; padding: 12px 18px !important; }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
+  /* Hide lang/theme toggles in mobile - hamburger takes over */
+  .lang-toggle, .nav-inner > .theme-toggle { display: none; }
 }
 
 /* ── HERO ── */
