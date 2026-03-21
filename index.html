@@ -45,7 +45,33 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="style.css?v=42g" />
+  <link rel="stylesheet" href="style.css?v=42h" />
+  <!-- Critical mobile CSS — inline to bypass any CDN/browser cache -->
+  <style>
+    @media (max-width: 900px) {
+      nav ul.nav-links { display: none !important; }
+      .nav-hamburger { display: flex !important; }
+      .lang-toggle { display: none !important; }
+      #theme-toggle { display: none !important; }
+    }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: 1px solid rgba(128,128,128,0.3);
+      border-radius: 4px;
+      outline: none;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+    }
+  </style>
 </head>
 <body>
 
@@ -471,6 +497,6 @@
   </script>
 
 
-  <script src="landing.js?v=42g"></script>
+  <script src="landing.js?v=42h"></script>
 </body>
 </html>
