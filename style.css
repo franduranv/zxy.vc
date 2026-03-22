@@ -232,6 +232,8 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: #ffffff; }
+[data-theme="light"] .nav-links a { color: rgba(0,0,0,0.75); }
+[data-theme="light"] .nav-links a:hover { color: #000000; }
 /* Push lang + theme toggles to the right edge */
 .nav-links ~ .lang-toggle { margin-left: auto; }
 .nav-cta {
@@ -1019,4 +1021,23 @@ footer {
   .ft-inner { flex-direction: column; }
   .ft-nav { gap: 16px; }
   .ft-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Alicia / BaW Venture Operator badge ── */
+.agent-card-baw {
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  background: rgba(251, 191, 36, 0.04);
+}
+.agent-badge-baw {
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 4px;
+  padding: 2px 8px;
 }
