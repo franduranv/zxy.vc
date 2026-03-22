@@ -38,7 +38,7 @@
 
   <!-- Anti-flash -->
   <script>(function(){var t=localStorage.getItem('zxy-theme');document.documentElement.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));})();</script>
-  <link rel="stylesheet" href="style.css?v=final3" />
+  <link rel="stylesheet" href="style.css?v=final4" />
 
   <!-- Anti-flash: aplica tema antes del primer render -->
   <script>
@@ -140,14 +140,17 @@
             </div>
             <div>
               <div class="equipo-name">Agent OS</div>
-              <div class="equipo-role" data-es="El equipo que no duerme" data-en="The team that never sleeps">El equipo que no duerme</div>
+              <div class="equipo-role" style="display:flex;align-items:center;gap:6px;">
+                <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;flex-shrink:0;"></span>
+                <span data-es="Sistema Activo · 24/7" data-en="System Active · 24/7">Sistema Activo · 24/7</span>
+              </div>
             </div>
           </div>
-          <p class="equipo-bio">
-            La infraestructura que hace posibles los ventures imposibles. 6 sistemas especializados de inteligencia operativa disponibles 24/7 desde el día cero de cualquier venture.
+          <p class="equipo-bio" data-es="Infraestructura operativa de ZXY. 6 agentes especializados — cada uno con dominio propio, memoria persistente y herramientas de ejecución. No contratan. No descansan. No fallan." data-en="ZXY's operational infrastructure. 6 specialized agents — each with their own domain, persistent memory, and execution tools. They don't hire. They don't rest. They don't fail.">
+            Infraestructura operativa de ZXY. 6 agentes especializados — cada uno con dominio propio, memoria persistente y herramientas de ejecución. No contratan. No descansan. No fallan.
           </p>
           <div class="equipo-links">
-            <a href="#agente" class="equipo-link" data-es="Conocer Agent OS →" data-en="Meet Agent OS →">Conocer Agent OS →</a>
+            <a href="#agente" class="equipo-link" data-es="Ver el sistema →" data-en="See the system →">Ver el sistema →</a>
           </div>
         </div>
       </div>
@@ -478,6 +481,6 @@
   </script>
 
 
-  <script src="landing.js?v=final3"></script>
+  <script src="landing.js?v=final4"></script>
 </body>
 </html>
