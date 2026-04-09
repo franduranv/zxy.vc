@@ -620,6 +620,13 @@ nav {
   opacity: 0;
   transition: opacity 0.3s;
 }
+.venture-card:has(.badge-building) {
+  opacity: 0.6;
+  transition: opacity 0.35s ease, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.venture-card:has(.badge-building):hover {
+  opacity: 1;
+}
 .venture-card:hover {
   border-color: var(--border2);
   transform: translateY(-4px);
